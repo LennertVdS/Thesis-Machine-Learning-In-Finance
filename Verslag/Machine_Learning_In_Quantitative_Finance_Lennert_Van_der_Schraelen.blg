@@ -1,0 +1,29 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen.aux
+The style file: apalike.bst
+Database file #1: my.bib
+Warning--entry type for "pptkmeans" isn't style-file defined
+--line 89 of file my.bib
+Repeated entry---line 424 of file my.bib
+ : @inproceedings{titsias2009variational
+ :                                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 460 of file my.bib
+ : @article{gardner2018product
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 487 of file my.bib
+ : @article{wilson2015thoughts
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 494 of file my.bib
+ : @inproceedings{wilson2015kernel
+ :                                ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "wimschoutensvg" isn't style-file defined
+--line 607 of file my.bib
+Warning--I didn't find a database entry for "hensman2013"
+Warning--empty journal in fichtner2018tutorial
+Warning--empty journal in modelscomparative
+Warning--can't use both author and editor fields in GPRbook
+Warning--empty journal in yang2017understanding
+(There were 4 error messages)
