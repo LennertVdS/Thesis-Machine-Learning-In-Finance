@@ -1,32 +1,15 @@
 import numpy as np
-from scr import basic_regression_newtry
-from scr import data_generator
+from scr import basic_regression_code
 from timeit import default_timer as timer
 
-def basic_regression_ex(amountTraining, amountTest, model, type):
+"""
+This code calculates the fitting and predicting properties of a basic polynomial regression
+"""
 
-    # Generate data
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            trainingValues , trainingParameters = \
-                data_generator.data_generators_heston.training_data_heston_vanillas(amountTraining, type)
-        if type == 'DOBP':
-            trainingValues , trainingParameters = data_generator.data_generators_heston.training_data_heston_down_and_out(amountTraining)
-    if type == 'american_call' or type == 'american_put' :
-        trainingValues, trainingParameters = data_generator.data_generators_american.training_data_american(amountTraining,type)
+def basic_regression_ex(amountTraining, amountTest, trainingValues,trainingParameters,testValues,testParameters):
 
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_vanillas(amountTest,
-                                                                                                         type)
-        if type == 'DOBP':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_down_and_out(amountTest)
-    if type == 'american_call' or type == 'american_put':
-        testValues, testParameters = data_generator.data_generators_american.test_data_american(amountTest, type)
 
-    print('Generating data done')
-
-    br = basic_regression_newtry.basicregression(trainingParameters, trainingValues.transpose())
+    br = basic_regression_code.basicregression(trainingParameters, trainingValues.transpose())
 
     startFittingTimer = timer()
     br.fitting()

@@ -2,7 +2,9 @@ import numpy as np
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 
-# This code executes a basic polynomial regression
+"""
+This code executes a basic polynomial regression
+"""
 
 class basicregression:
 

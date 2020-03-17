@@ -2,50 +2,32 @@ import numpy as np
 import tensorflow_probability as tfp
 import tensorflow.compat.v1 as tf
 
-tf.logging.set_verbosity(tf.logging.ERROR)
-
-tf.disable_v2_behavior()
-tfk = tfp.positive_semidefinite_kernels
-tfd = tfp.distributions
-from scr import data_generator
-from scr import Variational_gpr_newtry
+from scr import Variational_gpr_tensorflow_code
 from timeit import default_timer as timer
 import pymc3 as pm
 
-def variational_gpr_ex(amountTraining, amount_Inducing, amountTest, model, type):
+tf.logging.set_verbosity(tf.logging.ERROR)
+tf.disable_v2_behavior()
+tfk = tfp.positive_semidefinite_kernels
+tfd = tfp.distributions
+
+"""
+This code calculates the fitting and predicting properties of SVG 
+"""
+
+def variational_gpr_ex(amountTraining, amount_Inducing, amountTest,trainingValues,trainingParameters,testValues,testParameters):
 
     # We'll use double precision throughout for better numerics.
     dtype = np.float64
 
-    # Generate data
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put':
-            trainingValues, trainingParameters = \
-                data_generator.data_generators_heston.training_data_heston_vanillas(amountTraining, type)
-        if type == 'DOBP':
-            trainingValues, trainingParameters = data_generator.data_generators_heston.training_data_heston_down_and_out(
-                amountTraining)
-    if type == 'american_call' or type == 'american_put':
-        trainingValues, trainingParameters = data_generator.data_generators_american.training_data_american(
-            amountTraining, type)
 
     valuesTraining = np.squeeze(np.asarray(trainingValues))
     X = np.array(np.squeeze(np.asarray(trainingParameters)),dtype=np.float64)
     index_points = np.squeeze(X[..., np.newaxis])
 
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            testValues , testParameters = data_generator.data_generators_heston.test_data_heston_vanillas(amountTest, type)
-        if type == 'DOBP':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_down_and_out(amountTest)
-    if type == 'american_call' or type == 'american_put' :
-        testValues, testParameters = data_generator.data_generators_american.test_data_american(amountTest, type)
-
     valuesTest = np.squeeze(np.asarray(testValues))
     X_test = np.array(np.squeeze(np.asarray(testParameters)),dtype=np.float64)
     index_points_test = np.squeeze(X_test[..., np.newaxis])
-
-    print('Generating data done')
 
 
     # Inducing values
@@ -55,7 +37,7 @@ def variational_gpr_ex(amountTraining, amount_Inducing, amountTest, model, type)
     endFittingTimer = timer()
     print('Timer of kmeans ' + str(endFittingTimer - startFittingTimer))
 
-    gp = Variational_gpr_newtry.Variational(amountTraining,0.00001,inducing_index_points,X,valuesTraining,index_points)
+    gp = Variational_gpr_tensorflow_code.Variational(amountTraining, 0.0001, inducing_index_points, X, valuesTraining, index_points, True)
 
     startFittingTimer = timer()
     gp.fitting()

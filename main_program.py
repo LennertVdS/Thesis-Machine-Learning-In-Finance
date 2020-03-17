@@ -1,32 +1,47 @@
-from scr import basic_regression
-from scr import standard_gpr
-from scr import Sparse_gpr
-from scr import Sparse_gpr_kmeans
-from scr import Variational_gpr
-from scr import plot_maker
 import numpy as np
+from scr import  data_processing
 
-method = 'sparse_kmeans_VFE'       # basic, standard, kronecker, sparse_FITC, sparse_VFE, sparse_kmeans_FITC, sparse_kmeans_VFE, variational
-type = 'vanilla_call'             # vanilla_call, vanilla_put, DOBP, american_call, american_put
-model = 'heston'          # heston or vg (empty for american options)
-amounttraining = 1000
-amounttest = 1000
-amountinducing = 50        # for the sparse, variational and inducing methods
+"""
+Welcome to the python code belonging to the thesis  "Machine Learning In Quantitative Finance, A kernel of truth" 
+
+This is the main file, where one can modify certain parameters and repeat the experiments. I'd like to thank the
+authors of the packages tensorflow (tf), gpytorch (gpy) and pymc3 (pym) alleviating the work. When we use one of these
+packages, we write "_package"
+
+In order to test multiple methods at the same time, just put them all in the method string. It is also possible to include your own 
+data, ignoring the financial aspect of this code by typing 'own_data' in the string corresponding to type.
+
+Author: Lennert Van der Schraelen
+
+method: 
+    Polynomial_Regression, standard_GPR, sparse_FITC, sparse_VFE, sparse_kmeans_FITC, sparse_kmeans_VFE, variational_tf
+    standard_gpy, vfe_gpy, variational_gpy, skip_gpy, map_bayesian_pym, full_bayesian_pym
+    map_bayesian_sparse_pym, full_bayesian_sparse_pym
+
+type:
+    vanilla_call, vanilla_put, DOBP, american_call, american_put, own_data 
+   
+model:
+    heston or vg (empty for american options or own data) 
+   
+amounttraining:
+    amount of training points
+
+amounttest:
+    amount of testing points (for SKIP the one-dimensional amount)
+
+amountinducing:
+    amount of inducing points (if necessary)
+
+"""
+
+method = 'full_bayesian_sparse_pym'
+type = 'vanilla_call'
+model = 'heston'
+amounttraining = 30
+amounttest = 10
+amountinducing = 5
 
 np.random.seed(1)
 
-if method == 'basic':
-    basic_regression.basic_regression_ex(amounttraining,amounttest,model,type)
-if method == 'standard':
-    standard_gpr.standard_gpr_ex(amounttraining,amounttest,model, type)
-if method == 'sparse_FITC' or method == 'sparse_VFE':
-    Sparse_gpr.sparse_gpr_ex(amounttraining, amountinducing, amounttest, model, type, method)
-if method == 'sparse_kmeans_FITC' or method == 'sparse_kmeans_VFE':
-    Sparse_gpr_kmeans.sparse_gpr_kmeans_ex(amounttraining, amountinducing, amounttest, model, type, method)
-if method == 'variational':
-    Variational_gpr.variational_gpr_ex(amounttraining, amountinducing, amounttest, model, type)
-
-
-if method == 'plotmaker':
-    plot_maker.plot_maker_ex(amounttraining, amountinducing, amounttest, model, type, 'sparse_kmeans_VFE')
-
+data_processing.data_processing_ex(method, type, model, amounttraining, amounttest,amountinducing)

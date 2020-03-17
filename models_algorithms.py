@@ -5,6 +5,11 @@ from scipy.fftpack import fft
 from scipy.interpolate import interp1d
 from multiprocessing import freeze_support
 from pathos.multiprocessing import ProcessingPool as Pool
+import datetime
+
+"""
+In this file, we calculate the prices of options 
+"""
 
 
 class model:
@@ -173,12 +178,10 @@ class american_option(model):
     def get_parameters(self):
         return self.sigma, self.strike, self.maturity, self.stock_value, self.interest, self.dividend_yield
 
-    def binomial_tree_pricing(self, type):
+    def binomial_tree_pricing(self,  type, dt):
 
+        print(datetime.datetime.now())
         sigma, K, T, S0, r, q = self.get_parameters()
-
-        #time steps
-        dt= 1/10
 
         #matrix dimension
         n = int(round(T/dt))
@@ -242,15 +245,10 @@ class down_and_out_barrier_option_heston(model):
                self.interest, self.dividend_yield
 
 
-    def monte_Carlo(self):
+    def monte_Carlo(self, m, dt):
 
         kappa, eta, theta, rho, sigma0, H, K, T, S0, r, q = self.get_parameters()
-
-        #paths
-        m = 10000
-
-        #time steps
-        dt= 1/250
+        print(datetime.datetime.now())
 
         #matrix dimension
         n = int(round(T/dt))
@@ -277,54 +275,54 @@ class down_and_out_barrier_option_heston(model):
 
         return DOBP
 
-class down_and_out_barrier_option_vg(model):
-
-    # initialise the constants of the model
-    # inherit from model
-    def __init__(self, nu, theta, sigma, barrier, strike, maturity, stock_value, interest, dividend_yield):
-        super().__init__(strike, stock_value, maturity, interest, dividend_yield)
-        self.nu = nu
-        self.theta = theta
-        self.sigma = sigma
-        self.barrier = barrier
-
-    # getter
-    def get_parameters(self):
-        return self.nu, self.theta, self.sigma, self.barrier, self.strike, self.maturity, self.stock_value, \
-               self.interest, self.dividend_yield
-
-    def monte_Carlo(self):
-
-        nu, theta, sigma, H, K, T, S0, r, q = self.get_parameters()
-
-        # paths
-        m = 10000
-
-        #time steps
-        dt= 1/250
-
-        #matrix dimension
-        n = int(round(T/dt))
-
-        omega = nu ** (-1) * np.log(1 - 0.5 * (sigma ** 2) * nu - theta * nu)
-
-        eps = np.random.randn(m, n)
-        g = np.random.gamma(dt / nu, nu,(m,n))
-        vg = pd.DataFrame(0, index=range(m), columns=range(n + 1))
-
-        vg.iloc[0,0] = 0
-
-        for s in range(n):
-
-            vg.iloc[:,s+1] = vg.iloc[:,s] + theta*g[:,s] + sigma*np.sqrt(g[:,s]) * eps[:,s]
-
-        S = S0*np.exp((r-q + omega) * dt +vg)
-
-        DOBP_path = np.maximum(((S.min(axis =1) - H)/ (np.abs(S.min(axis =1) - H))),0)  * np.maximum((K - S.iloc[:,n]) * np.exp(-r*T), 0)
-
-        DOBP = DOBP_path.mean()
-
-        return DOBP
+# class down_and_out_barrier_option_vg(model):
+#
+#     # initialise the constants of the model
+#     # inherit from model
+#     def __init__(self, nu, theta, sigma, barrier, strike, maturity, stock_value, interest, dividend_yield):
+#         super().__init__(strike, stock_value, maturity, interest, dividend_yield)
+#         self.nu = nu
+#         self.theta = theta
+#         self.sigma = sigma
+#         self.barrier = barrier
+#
+#     # getter
+#     def get_parameters(self):
+#         return self.nu, self.theta, self.sigma, self.barrier, self.strike, self.maturity, self.stock_value, \
+#                self.interest, self.dividend_yield
+#
+#     def monte_Carlo(self,m, dt):
+#
+#         nu, theta, sigma, H, K, T, S0, r, q = self.get_parameters()
+#
+#         # paths
+#         #m = 10000
+#
+#         #time steps
+#         #dt= 1/250
+#
+#         #matrix dimension
+#         n = int(round(T/dt))
+#
+#         omega = nu ** (-1) * np.log(1 - 0.5 * (sigma ** 2) * nu - theta * nu)
+#
+#         eps = np.random.randn(m, n)
+#         g = np.random.gamma(dt / nu, nu,(m,n))
+#         vg = pd.DataFrame(0, index=range(m), columns=range(n + 1))
+#
+#         vg.iloc[0,0] = 0
+#
+#         for s in range(n):
+#
+#             vg.iloc[:,s+1] = vg.iloc[:,s] + theta*g[:,s] + sigma*np.sqrt(g[:,s]) * eps[:,s]
+#
+#         S = S0*np.exp((r-q + omega) * dt +vg)
+#
+#         DOBP_path = np.maximum(((S.min(axis =1) - H)/ (np.abs(S.min(axis =1) - H))),0)  * np.maximum((K - S.iloc[:,n]) * np.exp(-r*T), 0)
+#
+#         DOBP = DOBP_path.mean()
+#
+#         return DOBP
 
 
 

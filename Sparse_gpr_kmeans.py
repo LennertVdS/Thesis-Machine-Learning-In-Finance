@@ -1,33 +1,14 @@
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.gaussian_process.kernels import RBF, ConstantKernel as C
-from scr import sparse_gpr_newtry_kmeans
-from scr import data_generator
+from scr import sparse_gpr_kmeans_code
 from timeit import default_timer as timer
 
+"""
+This code calculates the fitting and predicting properties of FITC and VFE using kmeans
+"""
 
-def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, model, type, method):
-
-    # Generate data
-
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            trainingValues , trainingParameters = \
-                data_generator.data_generators_heston.training_data_heston_vanillas(amountTraining, type)
-        if type == 'DOBP':
-            trainingValues , trainingParameters = data_generator.data_generators_heston.training_data_heston_down_and_out(amountTraining)
-    if type == 'american_call' or type == 'american_put' :
-        trainingValues, trainingParameters = data_generator.data_generators_american.training_data_american(amountTraining,type)
-
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            testValues , testParameters = data_generator.data_generators_heston.test_data_heston_vanillas(amountTest, type)
-        if type == 'DOBP':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_down_and_out(amountTest)
-    if type == 'american_call' or type == 'american_put' :
-        testValues, testParameters = data_generator.data_generators_american.test_data_american(amountTest, type)
-
-    print('Generating data done')
+def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, method,trainingValues,trainingParameters,testValues,testParameters):
 
     # inducing values
 
@@ -41,8 +22,8 @@ def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, model, type
 
     kernel = C(1.0, (1e-3, 1e3)) * RBF(10, (1e-2, 1e2))
 
-    gp = sparse_gpr_newtry_kmeans.gaussianprocessregression(kernel, 0.0000001, 0.000001, trainingParameters, parametersModelsInducing,
-                                                            trainingValues.transpose(),method,True)
+    gp = sparse_gpr_kmeans_code.gaussianprocessregression(kernel, 0.000001, 0.000001, trainingParameters, parametersModelsInducing,
+                                                          trainingValues.transpose(), method, True)
 
     startFittingTimer = timer()
     gp.fitting()
@@ -84,3 +65,12 @@ def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, model, type
 
     print('Out of sample MAE ' + str(MAE.to_numpy()))
     print('Out of sample AEE ' + str(AAE.to_numpy()))
+
+
+def method_finder(amounttraining, amountinducing, amounttest, method, trainingValues,trainingParameters,testValues,testParameters):
+    if method.find('sparse_kmeans_FITC') != -1:
+        sparse_gpr_kmeans_ex(amounttraining, amountinducing, amounttest, 'sparse_kmeans_FITC', trainingValues, trainingParameters,
+                             testValues, testParameters)
+    if method.find('sparse_kmeans_VFE') != -1:
+        sparse_gpr_kmeans_ex(amounttraining, amountinducing, amounttest, 'sparse_kmeans_VFE', trainingValues, trainingParameters,
+                             testValues, testParameters)

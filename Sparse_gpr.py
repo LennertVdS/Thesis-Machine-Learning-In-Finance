@@ -1,31 +1,10 @@
 import numpy as np
 from sklearn.gaussian_process.kernels import RBF, ConstantKernel as C
-from scr import sparse_gpr_newtry
+from scr import sparse_gpr_code
 from scr import data_generator
 from timeit import default_timer as timer
 
-def sparse_gpr_ex(amountTraining, amountInducing, amountTest, model, type, method):
-
-    # Generate data
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            trainingValues , trainingParameters = \
-                data_generator.data_generators_heston.training_data_heston_vanillas(amountTraining, type)
-        if type == 'DOBP':
-            trainingValues , trainingParameters = data_generator.data_generators_heston.training_data_heston_down_and_out(amountTraining)
-    if type == 'american_call' or type == 'american_put' :
-        trainingValues, trainingParameters = data_generator.data_generators_american.training_data_american(amountTraining,type)
-
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_vanillas(amountTest,
-                                                                                                         type)
-        if type == 'DOBP':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_down_and_out(amountTest)
-    if type == 'american_call' or type == 'american_put':
-        testValues, testParameters = data_generator.data_generators_american.test_data_american(amountTest, type)
-
-    print('Generating data done')
+def sparse_gpr_ex(amountTraining, amountInducing, amountTest, model, type, method, trainingValues,trainingParameters,testValues,testParameters):
 
     # Inducing values
 
@@ -37,10 +16,15 @@ def sparse_gpr_ex(amountTraining, amountInducing, amountTest, model, type, metho
     if type == 'american_call' or type == 'american_put' :
         inducingValues, inducingParameters = data_generator.data_generators_american.training_data_american(amountInducing, type)
 
+    if method.find('sparse_FITC') != -1:
+        method = 'sparse_FITC'
+    if method.find('sparse_VFE') != -1:
+        method = 'sparse_VFE'
+
 
     kernel = C(1.0, (1e-3, 1e3)) * RBF(10, (1e-2, 1e2))
 
-    gp = sparse_gpr_newtry.gaussianprocessregression(kernel, 0.001, 0.1, trainingParameters, inducingParameters, trainingValues.transpose(), method)
+    gp = sparse_gpr_code.gaussianprocessregression(kernel, 0.001, 0.1, trainingParameters, inducingParameters, trainingValues.transpose(), method)
 
     startFittingTimer = timer()
     gp.fitting()
@@ -80,3 +64,11 @@ def sparse_gpr_ex(amountTraining, amountInducing, amountTest, model, type, metho
 
     print('Out of sample MAE ' + str(MAE.to_numpy()))
     print('Out of sample AEE ' + str(AAE.to_numpy()))
+
+def method_finder(amounttraining, amountinducing, amounttest,model, type, method, trainingValues,trainingParameters,testValues,testParameters):
+    if method.find('sparse_FITC') != -1:
+        sparse_gpr_ex(amounttraining, amountinducing, amounttest, model, type, 'sparse_FITC', trainingValues,
+                      trainingParameters,testValues, testParameters)
+    if method.find('sparse_VFE') != -1:
+        sparse_gpr_ex(amounttraining, amountinducing, amounttest, model, type, 'sparse_VFE', trainingValues,
+                      trainingParameters,testValues, testParameters)

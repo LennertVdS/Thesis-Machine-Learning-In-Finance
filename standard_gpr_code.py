@@ -6,9 +6,10 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 
 
+"""
+This code executes a standard GPR using the BBMM framework
+"""
 
-# This code is based on the code of sklearn.gaussianprocess
-# made more easy and modified
 
 class gaussianprocessregression:
 
@@ -18,15 +19,10 @@ class gaussianprocessregression:
         self.X_train = X_train
         self.y_train = y_train
         self.zero_mean = zero_mean
-        self.n_restarts_optimizer = 5
+        self.n_restarts_optimizer = 1
 
 
     def prediction(self,X_test):
-        # K = self.kernel(self.X_train)
-        # K[np.diag_indices_from(K)] += self.noise
-        #
-        # self.L = self.cholesky_dec(K)
-        # self.alpha = cho_solve((self.L, True), self.y_train)
 
         K_ast = self.kernel(self.X_train,X_test)
         pred = (K_ast.transpose()).dot(self.alpha)
@@ -90,10 +86,7 @@ class gaussianprocessregression:
         kernel.theta = theta
         K = kernel(self.X_train)
 
-        # Support multi-dimensional output of self.y_train_
         y_train = self.y_train
-        # if y_train.ndim == 1:
-        #     y_train = y_train[:, np.newaxis]        #put it in matrix form
 
         K[np.diag_indices_from(K)] += self.noise
 
@@ -101,7 +94,7 @@ class gaussianprocessregression:
         alpha = cho_solve((L, True), y_train)
 
         # Compute log-likelihood (compare line 7)
-        log_likelihood = -0.5 * np.einsum("ik,ik->k", y_train, alpha)                      #eerste term
+        log_likelihood = -0.5 * np.einsum("ik,ik->k", y_train, alpha)                      #first term
         log_likelihood -= np.log(np.diag(L)).sum()                                        #determinant (2*1/2 = 1)
         log_likelihood -= K.shape[0] / 2 * np.log(2 * np.pi)                               #cte term
 

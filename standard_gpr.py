@@ -1,41 +1,21 @@
 import numpy as np
 from sklearn.gaussian_process.kernels import RBF, ConstantKernel as C
 from timeit import default_timer as timer
-from scr import standard_gpr_newtry
-from scr import data_generator
+from scr import standard_gpr_code
 
 
-# A standard Gaussian Process suited for calculation the price of derivatives.
+"""
+This code calculates the fitting and predicting properties of a standard GPR
+"""
 
-def standard_gpr_ex(amountTraining,amountTest,model,type):
+def standard_gpr_ex(amountTraining,amountTest,trainingValues,trainingParameters,testValues,testParameters):
 
-
-    # Generate data
-
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            trainingValues , trainingParameters = \
-                data_generator.data_generators_heston.training_data_heston_vanillas(amountTraining, type)
-        if type == 'DOBP':
-            trainingValues , trainingParameters = data_generator.data_generators_heston.training_data_heston_down_and_out(amountTraining)
-    if type == 'american_call' or type == 'american_put' :
-        trainingValues, trainingParameters = data_generator.data_generators_american.training_data_american(amountTraining,type)
-
-    if model == 'heston':
-        if type == 'vanilla_call' or type == 'vanilla_put' :
-            testValues , testParameters = data_generator.data_generators_heston.test_data_heston_vanillas(amountTest, type)
-        if type == 'DOBP':
-            testValues, testParameters = data_generator.data_generators_heston.test_data_heston_down_and_out(amountTest)
-    if type == 'american_call' or type == 'american_put' :
-        testValues, testParameters = data_generator.data_generators_american.test_data_american(amountTest, type)
-
-    print('Generating data done')
 
     # Instantiate a Gaussian Process model
 
     kernel = C(1.0, (1e-3, 1e3)) * RBF(10, (1e-2, 1e2))
-    gp = standard_gpr_newtry.gaussianprocessregression(kernel, 0.000001, trainingParameters, trainingValues.transpose())
-
+    gp = standard_gpr_code.gaussianprocessregression(kernel, 0.000001, trainingParameters, trainingValues.transpose(), True)    #clean data
+    #gp = standard_gpr_code.gaussianprocessregression(kernel, 0.0001, trainingParameters, trainingValues.transpose(), True)        #noisy data
     startFittingTimer = timer()
     gp.fitting()
     endFittingTimer = timer()
