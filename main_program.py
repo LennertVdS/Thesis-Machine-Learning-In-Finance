@@ -35,13 +35,14 @@ amountinducing:
 
 """
 
-method = 'full_bayesian_sparse_pym'
-type = 'vanilla_call'
-model = 'heston'
-amounttraining = 30
-amounttest = 10
-amountinducing = 5
+method = 'map_bayesian_pym'
+type = 'own_data'
+model = ''
+amounttraining = 4000
+amounttest = 1000
+amountinducing = 200
 
-np.random.seed(1)
+#np.random.seed(1)
 
-data_processing.data_processing_ex(method, type, model, amounttraining, amounttest,amountinducing)
+if __name__ == '__main__':
+    data_processing.data_processing_ex(method, type, model, amounttraining, amounttest,amountinducing)

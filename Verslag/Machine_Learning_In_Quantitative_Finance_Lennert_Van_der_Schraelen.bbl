@@ -116,6 +116,8 @@ Gardner, J.~R., Pleiss, G., Wu, R., Weinberger, K.~Q., and Wilson, A.~G.
 \bibitem[Gormley, 2017]{pptkmeans}
 Gormley, M. (2017).
 \newblock Clustering (k-means).
+\newblock
+  https://www.cs.cmu.edu/~mgormley/courses/10601-s17/slides/lecture15-cluster.pdf.
 
 \bibitem[Hensman et~al., 2013]{hensman2013gaussian}
 Hensman, J., Fusi, N., and Lawrence, N.~D. (2013).
@@ -259,6 +261,9 @@ Sch{\"o}lkopf, B., Herbrich, R., and Smola, A.~J. (2001).
 \bibitem[Schoutens, 2008]{wimschoutensvg}
 Schoutens, W. (2008).
 \newblock The world of vg.
+\newblock In {\em M. Vanmaele, D. Deelstra, A. De Schepper, J. Dhaene, en P.
+  Van Goethem, editors, Handelingen Contactforum Actuarial and Financial
+  Mathematics Conference, pagina’s}, pages 3--54.
 
 \bibitem[Sejdinovic and Gretton, 2012]{sejdinovic2012rkhs}
 Sejdinovic, D. and Gretton, A. (2012).

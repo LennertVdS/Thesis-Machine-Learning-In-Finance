@@ -90,7 +90,6 @@ def training_extra(model, trainingParameters, trainingValues,):
     signal_variance = model.covar_module.outputscale.item()
     lengthscale = model.covar_module.base_kernel.lengthscale.item()
     noise = model.likelihood.noise.item()
-
     kernel = C(signal_variance) * RBF(lengthscale)
     K = kernel(trainingParameters)
     K[np.diag_indices_from(K)] += noise ** 2

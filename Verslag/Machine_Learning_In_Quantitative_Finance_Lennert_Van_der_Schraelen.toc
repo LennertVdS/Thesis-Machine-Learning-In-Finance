@@ -40,32 +40,36 @@
 \contentsline {section}{\numberline {8.2}Bayesian Variational Method}{48}% 
 \contentsline {section}{\numberline {8.3}Deep methods for Gaussian processes}{49}% 
 \contentsline {chapter}{\numberline {9}Gaussian Process Regression in Finance}{52}% 
-\contentsline {chapter}{\numberline {10}Scheme and Conclusion}{61}% 
-\contentsline {section}{\numberline {10.1}Scheme}{61}% 
-\contentsline {section}{\numberline {10.2}Conclusion}{62}% 
-\contentsline {chapter}{\numberline {11}Appendix}{64}% 
-\contentsline {section}{\numberline {11.1}Brownian motion}{64}% 
-\contentsline {section}{\numberline {11.2}Pricing Derivatives Using Binomial Trees}{64}% 
-\contentsline {section}{\numberline {11.3}The FFT Algorithm}{65}% 
-\contentsline {section}{\numberline {11.4}Pricing derivatives using Monte Carlo Simulations}{67}% 
-\contentsline {section}{\numberline {11.5}Bayes Theorem}{67}% 
-\contentsline {section}{\numberline {11.6}The Matrix Inversion Lemma}{68}% 
-\contentsline {section}{\numberline {11.7}Gaussian Identities}{68}% 
-\contentsline {section}{\numberline {11.8}L-BFGS}{69}% 
-\contentsline {section}{\numberline {11.9}Cholesky decomposition}{69}% 
-\contentsline {section}{\numberline {11.10}The Kronecker product}{69}% 
-\contentsline {section}{\numberline {11.11}K-means}{70}% 
-\contentsline {section}{\numberline {11.12}Sylvester's Determinant Identity}{71}% 
-\contentsline {section}{\numberline {11.13}The Kullback-Leibler (KL) divergence and Variational Lower bound}{71}% 
-\contentsline {paragraph}{Proof:}{72}% 
-\contentsline {section}{\numberline {11.14}Stochastic Variational Inference and Stochastic Gradient methods}{73}% 
-\contentsline {section}{\numberline {11.15}Adam Optimiser}{74}% 
-\contentsline {section}{\numberline {11.16}The Natural Gradient}{74}% 
-\contentsline {section}{\numberline {11.17}A Short Notion About Interpolation}{75}% 
-\contentsline {section}{\numberline {11.18}The Lanczos decomposition}{76}% 
-\contentsline {section}{\numberline {11.19}Conjugate Gradient Method}{77}% 
-\contentsline {section}{\numberline {11.20}Preconditioning}{80}% 
-\contentsline {section}{\numberline {11.21}Stochastic Trace Estimation}{81}% 
-\contentsline {paragraph}{Proof:}{81}% 
-\contentsline {section}{\numberline {11.22}Maximum a posteriori (Map) estimation}{82}% 
-\contentsline {section}{\numberline {11.23}Markov Chain Monte Carlo Methods}{82}% 
+\contentsline {section}{\numberline {9.1}Pricing of Vanilla Options in the Heston Model}{53}% 
+\contentsline {section}{\numberline {9.2}Pricing Barrier Options in the Heston Model}{56}% 
+\contentsline {section}{\numberline {9.3}Pricing American options}{60}% 
+\contentsline {section}{\numberline {9.4}Visual comparison of standard GPR, FITC and VFE}{62}% 
+\contentsline {chapter}{\numberline {10}Scheme and Conclusion}{63}% 
+\contentsline {section}{\numberline {10.1}Scheme}{63}% 
+\contentsline {section}{\numberline {10.2}Conclusion}{65}% 
+\contentsline {chapter}{\numberline {11}Appendix}{66}% 
+\contentsline {section}{\numberline {11.1}Brownian motion}{66}% 
+\contentsline {section}{\numberline {11.2}Pricing Derivatives Using Binomial Trees}{66}% 
+\contentsline {section}{\numberline {11.3}The FFT Algorithm}{67}% 
+\contentsline {section}{\numberline {11.4}Pricing derivatives using Monte Carlo Simulations}{69}% 
+\contentsline {section}{\numberline {11.5}Bayes Theorem}{69}% 
+\contentsline {section}{\numberline {11.6}The Matrix Inversion Lemma}{70}% 
+\contentsline {section}{\numberline {11.7}Gaussian Identities}{70}% 
+\contentsline {section}{\numberline {11.8}L-BFGS}{71}% 
+\contentsline {section}{\numberline {11.9}Cholesky decomposition}{71}% 
+\contentsline {section}{\numberline {11.10}The Kronecker product}{71}% 
+\contentsline {section}{\numberline {11.11}K-means}{72}% 
+\contentsline {section}{\numberline {11.12}Sylvester's Determinant Identity}{73}% 
+\contentsline {section}{\numberline {11.13}The Kullback-Leibler (KL) divergence and Variational Lower bound}{73}% 
+\contentsline {paragraph}{Proof:}{74}% 
+\contentsline {section}{\numberline {11.14}Stochastic Variational Inference and Stochastic Gradient methods}{75}% 
+\contentsline {section}{\numberline {11.15}Adam Optimiser}{76}% 
+\contentsline {section}{\numberline {11.16}The Natural Gradient}{76}% 
+\contentsline {section}{\numberline {11.17}A Short Notion About Interpolation}{77}% 
+\contentsline {section}{\numberline {11.18}The Lanczos decomposition}{78}% 
+\contentsline {section}{\numberline {11.19}Conjugate Gradient Method}{79}% 
+\contentsline {section}{\numberline {11.20}Preconditioning}{82}% 
+\contentsline {section}{\numberline {11.21}Stochastic Trace Estimation}{83}% 
+\contentsline {paragraph}{Proof:}{83}% 
+\contentsline {section}{\numberline {11.22}Maximum a posteriori (Map) estimation}{84}% 
+\contentsline {section}{\numberline {11.23}Markov Chain Monte Carlo Methods}{84}% 

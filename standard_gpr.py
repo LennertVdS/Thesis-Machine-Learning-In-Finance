@@ -51,6 +51,7 @@ def standard_gpr_ex(amountTraining,amountTest,trainingValues,trainingParameters,
     MAE = (testValues.transpose() - y_pred).abs().max()
     AEE = (testValues.transpose() - y_pred).abs().sum() / amountTest
 
+
     print('Out of sample MAE ' + str(MAE.to_numpy()))
     print('Out of sample AEE ' + str(AEE.to_numpy()))
 

@@ -24,7 +24,7 @@ def sparse_gpr_ex(amountTraining, amountInducing, amountTest, model, type, metho
 
     kernel = C(1.0, (1e-3, 1e3)) * RBF(10, (1e-2, 1e2))
 
-    gp = sparse_gpr_code.gaussianprocessregression(kernel, 0.001, 0.1, trainingParameters, inducingParameters, trainingValues.transpose(), method)
+    gp = sparse_gpr_code.gaussianprocessregression(kernel, 0.0001, 0.1, trainingParameters, inducingParameters, trainingValues.transpose(), method)
 
     startFittingTimer = timer()
     gp.fitting()

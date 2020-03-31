@@ -3,6 +3,11 @@ import pandas as pd
 from scr import models_algorithms
 from timeit import default_timer as timer
 
+from multiprocessing import freeze_support
+from pathos.multiprocessing import ProcessingPool as Pool
+import multiprocessing as mp
+
+
 """
 This file generates the data, using the same paramater spaces as in "Machine learning for quantitative finance: fast
 derivative pricing, hedging and fitting" from De Spiegelaer et al.
@@ -35,19 +40,19 @@ class data_generators_heston:
             eta = np.random.uniform(0.01, 0.1)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.99, 0.9048)))
 
-            stock_value = 1
-            strike = 0.4+ (1/amountTraining) *x
-            maturity = 1
-            interest = 0.02
-            dividend_yield = 0.25
-
-            # heston
-
-            kappa = 2
-            rho = -0.7
-            theta = 0.6
-            eta = 0.02
-            sigma0 = 0.1
+            # stock_value = 1
+            # strike = 0.4+ (1/amountTraining) *x
+            # maturity = 1
+            # interest = 0.02
+            # dividend_yield = 0.25
+            #
+            # # heston
+            #
+            # kappa = 2
+            # rho = -0.7
+            # theta = 0.6
+            # eta = 0.02
+            # sigma0 = 0.1
 
             modelListTraining.append(
                 models_algorithms.vanilla_option_heston(kappa, eta, theta, rho, sigma0, strike, maturity, stock_value,
@@ -204,9 +209,11 @@ class data_generators_american:
 
             modelListTraining.append(
                 models_algorithms.american_option(sigma, strike, maturity, stock_value,
-                                                        interest, dividend_yield))
+                                                       interest, dividend_yield))
+
 
         for i, model in enumerate(modelListTraining):
+
             if type == 'american_call':
                 valuesDOBPTraining[i] = model.binomial_tree_pricing(0,1/50)
             if type == 'american_put':
@@ -215,6 +222,7 @@ class data_generators_american:
                 parametersModelsTraining.iat[i, j] = parameter
 
         return valuesDOBPTraining, parametersModelsTraining
+
 
     def test_data_american(amountTest,type):
 

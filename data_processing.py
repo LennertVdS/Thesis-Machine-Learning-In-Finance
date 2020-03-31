@@ -54,10 +54,10 @@ def data_processing_ex(method, type, model, amounttraining, amounttest,amountind
     #testParameters.to_csv('testParameters_vc', encoding='utf-8', index=False)
 
     if type == 'own_data':
-          trainingValues = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/trainingValues_DOBP_4000')
-          trainingParameters = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/trainingParameters_DOBP_4000')
-          testValues = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/testValues_DOBP')
-          testParameters = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/testParameters_DOBP')
+          trainingValues = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/trainingValues_DIBP_4000_exact')
+          trainingParameters = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/trainingParameters_DIBP_4000_exact')
+          testValues = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/testValues_DIBP_exact')
+          testParameters = pd.read_csv('C:/Users/lenne/Desktop/bestanden/ku leuven/thesis/python/testParameters_DIBP_exact')
 
 
     print('Generating data done')

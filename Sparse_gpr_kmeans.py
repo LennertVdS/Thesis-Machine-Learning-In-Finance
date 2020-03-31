@@ -22,7 +22,7 @@ def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, method,trai
 
     kernel = C(1.0, (1e-3, 1e3)) * RBF(10, (1e-2, 1e2))
 
-    gp = sparse_gpr_kmeans_code.gaussianprocessregression(kernel, 0.000001, 0.000001, trainingParameters, parametersModelsInducing,
+    gp = sparse_gpr_kmeans_code.gaussianprocessregression(kernel, 0.000001, 0.00001, trainingParameters, parametersModelsInducing,
                                                           trainingValues.transpose(), method, True)
 
     startFittingTimer = timer()

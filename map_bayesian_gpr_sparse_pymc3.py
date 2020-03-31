@@ -46,13 +46,15 @@ def map_bayesian_gpr_sparse_pymc3_ex(amountTraining, amount_Inducing, amountTest
     # this makes predicting in using very slow and not suitable for our data study
     # we write it ourself
 
+    inducingnoise = 0.0001
+
     d = [*mp.values()]
     kernel = C(d[4]) * RBF((d[3]))
     K = kernel(X)
     noise = d[5] ** 2
     K[np.diag_indices_from(K)] += noise
     K_uu = kernel(Xu,Xu)
-    K_uu[np.diag_indices_from(K_uu)] += 0.00001
+    K_uu[np.diag_indices_from(K_uu)] += inducingnoise
     K_xu = kernel(X,Xu)
     K_ux = kernel(Xu,X)
 

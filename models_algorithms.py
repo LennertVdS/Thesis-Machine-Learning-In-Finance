@@ -3,9 +3,9 @@ import pandas as pd
 import math
 from scipy.fftpack import fft
 from scipy.interpolate import interp1d
-from multiprocessing import freeze_support
-from pathos.multiprocessing import ProcessingPool as Pool
 import datetime
+
+
 
 """
 In this file, we calculate the prices of options 
@@ -181,6 +181,7 @@ class american_option(model):
     def binomial_tree_pricing(self,  type, dt):
 
         print(datetime.datetime.now())
+
         sigma, K, T, S0, r, q = self.get_parameters()
 
         #matrix dimension
@@ -211,7 +212,6 @@ class american_option(model):
             A.iloc[:, n] = np.maximum(S.iloc[:,n]-K, 0)  # call
         else:
             A.iloc[:, n] = np.maximum(K - S.iloc[:, n ], 0)  # put
-
 
         for j in range(n, 0, -1):
             for i in range(1,j+1,1):

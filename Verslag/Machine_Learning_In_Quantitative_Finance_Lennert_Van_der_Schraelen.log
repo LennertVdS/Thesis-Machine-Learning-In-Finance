@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.23)  17 MAR 2020 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.23)  31 MAR 2020 16:32
 entering extended mode
 **./Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen.tex
 (Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen.tex
@@ -459,6 +459,9 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count127
 \c@continuedfloat=\count128
 Package caption Info: float package is loaded.
+) ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft.st
 y"
@@ -537,20 +540,20 @@ LaTeX Warning: Label `MH_algorithm' multiply defined.
 \openout1 = `Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen
 .aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
 
 ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
@@ -603,35 +606,35 @@ G,.JBIG2,.JB2,.eps]
 \Hy@linkcounter=\count141
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 102.
 
 
 ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 105.
 ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 104.
+LaTeX Font Info:    Try loading font information for U+msb on input line 105.
 ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (9.33871pt too wide) in paragraph at lines 104--105
+Overfull \hbox (9.33871pt too wide) in paragraph at lines 105--106
 [][][][][][][] 
  []
 
 <LogoKULeuven.png, id=1, 401.5pt x 143.53625pt>
 File: LogoKULeuven.png Graphic file (type png)
 <use LogoKULeuven.png>
-Package pdftex.def Info: LogoKULeuven.png  used on input line 109.
+Package pdftex.def Info: LogoKULeuven.png  used on input line 110.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
-LaTeX Font Info:    Calculating math sizes for size <40> on input line 116.
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 117.
+LaTeX Font Info:    Calculating math sizes for size <40> on input line 117.
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 118.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 131.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
 
-Overfull \hbox (6.55522pt too wide) in paragraph at lines 166--167
+Overfull \hbox (6.55522pt too wide) in paragraph at lines 167--168
 [][][] 
  []
 
@@ -640,14 +643,14 @@ Overfull \hbox (6.55522pt too wide) in paragraph at lines 166--167
 
 {C:/Users/lenne/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./LogoKULeu
 ven.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 184.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 185.
 
 
 ("C:\Users\lenne\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 184.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
 
 [0] (Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen.toc
 [1])
@@ -656,91 +659,91 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 .toc'.
 
  [2]
-Overfull \hbox (16.60936pt too wide) in paragraph at lines 198--218
+Overfull \hbox (16.60936pt too wide) in paragraph at lines 199--219
 \OT1/cmr/m/n/12 Reyners Sofie, proposing this interesting subject and providing
  a pleasant working atmosphere
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--218
+Underfull \hbox (badness 10000) in paragraph at lines 199--219
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 229--268
+Underfull \hbox (badness 10000) in paragraph at lines 230--269
 
  []
 
 
-Overfull \hbox (29.38985pt too wide) in paragraph at lines 229--268
+Overfull \hbox (29.38985pt too wide) in paragraph at lines 230--269
 [] 
  []
 
 
-Overfull \hbox (23.08183pt too wide) in paragraph at lines 269--314
+Overfull \hbox (23.08183pt too wide) in paragraph at lines 270--315
 [][] 
  []
 
 [4] [5]
 Chapter 1.
 
-Overfull \hbox (3.52338pt too wide) in paragraph at lines 322--323
+Overfull \hbox (3.52338pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/12 Thereafter, we give a short summary concerning the necessary ma
 thematical pre-knowledge
  []
 
 
-Overfull \hbox (5.9094pt too wide) in paragraph at lines 322--323
+Overfull \hbox (5.9094pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/12 process regression which time complexity for training and fitti
 ng is $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n[]\OT1/cmr/m/n/12 )
 $, $\OML/cmm/m/it/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n[]\OT1/cmr/m/n/12 )$ r
@@ -748,7 +751,7 @@ eceptively.
  []
 
 
-Overfull \hbox (12.7492pt too wide) in paragraph at lines 322--323
+Overfull \hbox (12.7492pt too wide) in paragraph at lines 323--324
 \OT1/cmr/m/n/12 and/or uses advanced numerical methods. Some of these modificat
 ions achieve a considerable
  []
@@ -759,7 +762,7 @@ ions achieve a considerable
 ]
 Chapter 2.
 
-Overfull \hbox (3.40822pt too wide) in paragraph at lines 339--340
+Overfull \hbox (3.40822pt too wide) in paragraph at lines 340--341
 []\OT1/cmr/m/n/12 To obtain the pay-off, we just need to omit the expectation a
 nd the $[] []$ (discounting)
  []
@@ -767,13 +770,13 @@ nd the $[] []$ (discounting)
 [2
 
 ] [3]
-Overfull \hbox (12.45387pt too wide) in paragraph at lines 391--392
+Overfull \hbox (12.45387pt too wide) in paragraph at lines 393--394
 []\OT1/cmr/m/n/12 Before we introduce the Variance-Gamma model, we define the V
 ariance Gamma distribution
  []
 
 
-Overfull \hbox (20.84657pt too wide) in paragraph at lines 394--395
+Overfull \hbox (20.84657pt too wide) in paragraph at lines 396--397
 []\OT1/cmr/m/it/12 Suppose that the r.v. $\OML/cmm/m/it/12 X \OMS/cmsy/m/n/12 
  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; M\OT1/cmr/m/n/12 )$
  []
@@ -784,27 +787,27 @@ Chapter 3.
 
 ] [7]
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 516.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 518.
 
-Overfull \hbox (8.84113pt too wide) in paragraph at lines 535--536
+Overfull \hbox (8.84113pt too wide) in paragraph at lines 537--538
 []\OT1/cmr/m/it/12 Let $\OMS/cmsy/m/n/12 X$ \OT1/cmr/m/it/12 be the non-empty i
 nput domain. Then
  []
 
 
-Overfull \hbox (2.72755pt too wide) in paragraph at lines 538--539
+Overfull \hbox (2.72755pt too wide) in paragraph at lines 540--541
 []\OT1/cmr/m/n/12 Hence, from Moore-Aronszajn, we find that every positive defi
 nite function is a reproducing
  []
 
 [8]
-Overfull \hbox (8.77025pt too wide) in paragraph at lines 581--582
+Overfull \hbox (8.77025pt too wide) in paragraph at lines 583--584
 []\OT1/cmr/m/it/12 Suppose we are given a nonempty set $\OMS/cmsy/m/n/12 X$\OT1
 /cmr/m/it/12 , a positive
  []
 
 [9]
-Overfull \hbox (17.91812pt too wide) in paragraph at lines 629--630
+Overfull \hbox (17.91812pt too wide) in paragraph at lines 631--632
 []\OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 X\OML/cmm/m/it/12 ; 
 \OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a finite measure space and $\OML/cmm/m/i
 t/12 k \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12
@@ -816,13 +819,13 @@ Chapter 4.
 [12
 
 ] [13] [14]
-Overfull \hbox (8.47148pt too wide) in paragraph at lines 799--800
+Overfull \hbox (8.47148pt too wide) in paragraph at lines 801--802
 \OT1/cmr/m/n/12 demanding. These Bayesian techniques are quite popular and a cl
 ear explanation concerning
  []
 
 [15]
-Overfull \hbox (11.7321pt too wide) in paragraph at lines 803--804
+Overfull \hbox (11.7321pt too wide) in paragraph at lines 805--806
 []\OT1/cmr/m/n/12 From equation (4.4[]), we find that the likelihood $\OML/cmm/
 b/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 f \OMS/cmsy/m/n/12  N\OT1/cmr/m/n/
 12 (\OML/cmm/b/it/12 f\OML/cmm/m/it/12 ; []I\OT1/cmr/m/n/12 )$. Hence, by marg
@@ -830,7 +833,7 @@ inalization
  []
 
 [16]
-Overfull \hbox (19.08856pt too wide) in paragraph at lines 858--859
+Overfull \hbox (19.08856pt too wide) in paragraph at lines 860--861
 []\OT1/cmr/m/it/12 The computation
  []
 
@@ -839,10 +842,10 @@ Chapter 5.
 <kronecker.png, id=103, 528.17325pt x 224.63925pt>
 File: kronecker.png Graphic file (type png)
 <use kronecker.png>
-Package pdftex.def Info: kronecker.png  used on input line 872.
+Package pdftex.def Info: kronecker.png  used on input line 874.
 (pdftex.def)             Requested size: 182.09485pt x 77.44577pt.
 
-Overfull \hbox (17.9982pt too wide) in paragraph at lines 883--884
+Overfull \hbox (17.9982pt too wide) in paragraph at lines 885--886
 []\OT1/cmr/m/n/12 In other words, we have that $\OML/cmm/m/it/12 K \OT1/cmr/m/n
 /12 = [][] \OML/cmm/m/it/12 K[]$\OT1/cmr/m/n/12 . First let us try to determine
  the hyperparameters.
@@ -851,7 +854,7 @@ Overfull \hbox (17.9982pt too wide) in paragraph at lines 883--884
 [18
 
  <./kronecker.png>]
-Overfull \hbox (11.35663pt too wide) in paragraph at lines 904--905
+Overfull \hbox (11.35663pt too wide) in paragraph at lines 906--907
 []\OT1/cmr/m/n/12 which is not computationally demanding since we already calcu
 lated the eigendecomposition.
  []
@@ -859,7 +862,7 @@ lated the eigendecomposition.
 [19] [20]
 Chapter 6.
 
-Overfull \hbox (6.0456pt too wide) in paragraph at lines 917--918
+Overfull \hbox (6.0456pt too wide) in paragraph at lines 919--920
 \OT1/cmr/m/n/12 (Snelson and Ghahramani, 2006) using some statements found in (
 Rasmussen and Williams,
  []
@@ -867,7 +870,7 @@ Rasmussen and Williams,
 [21
 
 ]
-Overfull \hbox (2.20685pt too wide) in paragraph at lines 937--938
+Overfull \hbox (2.20685pt too wide) in paragraph at lines 939--940
 \OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm
 /b/it/12 u\OML/cmm/m/it/12 ; X; Z\OT1/cmr/m/n/12 )$ by an approximation $\OML/c
 mm/m/it/12 q\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 y\OMS/cmsy/m/n/12 j\OML/cmm/b/it/
@@ -878,49 +881,49 @@ K[]\OT1/cmr/m/n/12 )$ (reasonable
  []
 
 [22] [23]
-Overfull \hbox (4.10973pt too wide) in paragraph at lines 1024--1025
+Overfull \hbox (4.10973pt too wide) in paragraph at lines 1026--1027
 \OT1/cmr/m/n/12 Latent Variables (PLV) or Projected Process Approximation (PPA)
  and seen as a likelihood
  []
 
 [24] [25]
-Overfull \hbox (58.29005pt too wide) in paragraph at lines 1150--1151
+Overfull \hbox (58.29005pt too wide) in paragraph at lines 1152--1153
 []\OT1/cmr/m/it/12 The computational
  []
 
 [26]
-Overfull \hbox (18.6611pt too wide) in paragraph at lines 1193--1194
+Overfull \hbox (18.6611pt too wide) in paragraph at lines 1195--1196
 []\OT1/cmr/m/it/12 The computational cost
  []
 
 
-Overfull \hbox (18.39401pt too wide) in paragraph at lines 1197--1199
+Overfull \hbox (18.39401pt too wide) in paragraph at lines 1199--1201
  \OT1/cmr/bx/n/12 Proof:[] \OT1/cmr/m/n/12 The vector $\OML/cmm/m/it/12 K[]\OT
 1/cmr/m/n/12 []\OML/cmm/b/it/12 y$ \OT1/cmr/m/n/12 has been calculated during 
 training. Hence, the construction
  []
 
 
-Overfull \hbox (0.37712pt too wide) in paragraph at lines 1205--1206
+Overfull \hbox (0.37712pt too wide) in paragraph at lines 1207--1208
 \OT1/cmr/m/n/12 parameters rather than model parameters and are thus protected 
 from overfitting. Readers
  []
 
 [27]
-Overfull \hbox (3.11385pt too wide) in paragraph at lines 1235--1237
+Overfull \hbox (3.11385pt too wide) in paragraph at lines 1237--1239
 \OT1/cmr/m/n/12 variables only. From now, we denote that $[](\OML/cmm/b/it/12 y
 \OMS/cmsy/m/n/12 j\OML/cmm/b/it/12 u\OT1/cmr/m/n/12 ) = \U/msb/m/n/12 E[] [] []
 \OT1/cmr/m/n/12 )$ (it is independent
  []
 
 [28] [29] [30]
-Overfull \hbox (0.1486pt too wide) in paragraph at lines 1333--1334
+Overfull \hbox (0.1486pt too wide) in paragraph at lines 1335--1336
 []\OT1/cmr/m/n/12 A thorough discussion concerning the difference in behaviour 
 of the FITC and the standard
  []
 
 
-Overfull \hbox (18.18178pt too wide) in paragraph at lines 1351--1351
+Overfull \hbox (18.18178pt too wide) in paragraph at lines 1353--1353
 []\OT1/cmr/bx/n/17.28 Stochastic Variational Gaussian Process Regression 
  []
 
@@ -928,20 +931,20 @@ Overfull \hbox (18.18178pt too wide) in paragraph at lines 1351--1351
 File: plot_variational_inference.png Graphic file (type png)
 <use plot_variational_inference.png>
 Package pdftex.def Info: plot_variational_inference.png  used on input line 135
-6.
+8.
 (pdftex.def)             Requested size: 155.23785pt x 134.97202pt.
 
-Overfull \hbox (14.11331pt too wide) in paragraph at lines 1356--1357
+Overfull \hbox (14.11331pt too wide) in paragraph at lines 1358--1359
  [][] 
  []
 
 <plot_GPR_regression.png, id=149, 205.36725pt x 166.221pt>
 File: plot_GPR_regression.png Graphic file (type png)
 <use plot_GPR_regression.png>
-Package pdftex.def Info: plot_GPR_regression.png  used on input line 1361.
+Package pdftex.def Info: plot_GPR_regression.png  used on input line 1363.
 (pdftex.def)             Requested size: 155.23785pt x 125.6495pt.
 
-Overfull \hbox (14.11331pt too wide) in paragraph at lines 1361--1362
+Overfull \hbox (14.11331pt too wide) in paragraph at lines 1363--1364
  [][] 
  []
 
@@ -949,28 +952,28 @@ Overfull \hbox (14.11331pt too wide) in paragraph at lines 1361--1362
 File: plot_variational_regression.png Graphic file (type png)
 <use plot_variational_regression.png>
 Package pdftex.def Info: plot_variational_regression.png  used on input line 13
-66.
+68.
 (pdftex.def)             Requested size: 155.23785pt x 121.88365pt.
 
-Overfull \hbox (14.11331pt too wide) in paragraph at lines 1366--1367
+Overfull \hbox (14.11331pt too wide) in paragraph at lines 1368--1369
  [][] 
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 1367--1367
+Underfull \hbox (badness 6625) in paragraph at lines 1369--1369
 []\OT1/cmr/m/n/12 Figure 6.3: |Variational
  []
 
 [31] [32 <./plot_variational_inference.png> <./plot_GPR_regression.png> <./plot
 _variational_regression.png>]
-Overfull \hbox (15.4315pt too wide) in paragraph at lines 1449--1450
+Overfull \hbox (15.4315pt too wide) in paragraph at lines 1451--1452
 []\OT1/cmr/m/it/12 Denoting with $\OT1/cmr/m/n/12  [] = []\OML/cmm/m/it/12 K[]k
 []k[]K[]$\OT1/cmr/m/it/12 , $\OMS/cmsy/m/n/12 L[]$ \OT1/cmr/m/it/12 has the fol
 lowing explicit expression 
  []
 
 [33]
-Overfull \hbox (23.37364pt too wide) detected at line 1480
+Overfull \hbox (23.37364pt too wide) detected at line 1482
 []
  []
 
@@ -979,12 +982,12 @@ Chapter 7.
 [37
 
 ]
-Overfull \hbox (55.8825pt too wide) in paragraph at lines 1567--1568
+Overfull \hbox (55.8825pt too wide) in paragraph at lines 1569--1570
 []\OT1/cmr/m/it/12 A matrix vector multiplication
  []
 
 [38]
-Overfull \hbox (17.20166pt too wide) in paragraph at lines 1601--1601
+Overfull \hbox (17.20166pt too wide) in paragraph at lines 1603--1603
 []\OT1/cmr/bx/n/17.28 Product Kernel Interpolation for Scalable Gaussian
  []
 
@@ -992,44 +995,44 @@ Overfull \hbox (17.20166pt too wide) in paragraph at lines 1601--1601
 File: matrix_vector_multiplication.png Graphic file (type png)
 <use matrix_vector_multiplication.png>
 Package pdftex.def Info: matrix_vector_multiplication.png  used on input line 1
-622.
+624.
 (pdftex.def)             Requested size: 182.09485pt x 169.38762pt.
 [39]
-Overfull \hbox (15.18982pt too wide) in paragraph at lines 1629--1630
+Overfull \hbox (15.18982pt too wide) in paragraph at lines 1631--1632
 []\OT1/cmr/m/it/12 Suppose that MVMs with $\OML/cmm/m/it/12 K[]$
  []
 
 
-Overfull \hbox (5.91454pt too wide) in paragraph at lines 1635--1636
+Overfull \hbox (5.91454pt too wide) in paragraph at lines 1637--1638
 []\OT1/cmr/m/it/12 Suppose that $\OML/cmm/m/it/12 K[] \OT1/cmr/m/n/12 = \OML/cm
 m/m/it/12 Q[]T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Q[]\OT1/cmr/m/n/12 )[]$
  []
 
 [40 <./matrix_vector_multiplication.png>]
-Overfull \hbox (1.77884pt too wide) in paragraph at lines 1667--1669
+Overfull \hbox (1.77884pt too wide) in paragraph at lines 1669--1671
 []\OT1/cmr/m/it/12 Using the structured kernel interpolation approximation for 
 the components,
  []
 
 [41]
-Overfull \hbox (20.1103pt too wide) in paragraph at lines 1712--1713
+Overfull \hbox (20.1103pt too wide) in paragraph at lines 1714--1715
 \OT1/cmr/m/n/12 multiple solves $\OML/cmm/m/it/12 A[]B \OT1/cmr/m/n/12 = [\OML/
 cmm/m/it/12 A[]\OML/cmm/b/it/12 b[]\OML/cmm/m/it/12 ; [] ; A[]\OML/cmm/b/it/12 
 b[]\OT1/cmr/m/n/12 ]$ simultaneously using Matrix-Matrix multiplication
  []
 
 
-Overfull \hbox (9.44012pt too wide) in paragraph at lines 1712--1713
+Overfull \hbox (9.44012pt too wide) in paragraph at lines 1714--1715
 \OT1/cmr/m/n/12 with each of the solves $[]\OML/cmm/m/it/12 ; [] ; []$ \OT1/cmr
 /m/n/12 (see appendix section (11.20[])) which enables fast estimating
  []
 
 
-LaTeX Warning: Command \textunderscore invalid in math mode on input line 1738.
+LaTeX Warning: Command \textunderscore invalid in math mode on input line 1740.
 
 
 [42] [43]
-Overfull \hbox (6.30838pt too wide) in paragraph at lines 1779--1780
+Overfull \hbox (6.30838pt too wide) in paragraph at lines 1781--1782
 []\OT1/cmr/m/n/12 Now, we have that $[] \OMS/cmsy/m/n/12  \OT1/cmr/m/n/12 (\OM
 L/cmm/m/it/12 K[]K[]K[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 []I[]\OT1/cmr/m/n/1
 2 )$ for the SoR approximation. Multiplying
@@ -1038,7 +1041,7 @@ L/cmm/m/it/12 K[]K[]K[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 []I[]\OT1/cmr/m/n/1
 [44] [45]
 Chapter 8.
 
-Overfull \hbox (9.56126pt too wide) in paragraph at lines 1812--1813
+Overfull \hbox (9.56126pt too wide) in paragraph at lines 1814--1815
 []\OT1/cmr/m/n/12 We omit the extensive notation including $\OML/cmm/m/it/12 X$
  \OT1/cmr/m/n/12 and $\OML/cmm/b/it/12 x[]$\OT1/cmr/m/n/12 . By conditioning on
  the hyperparamters,
@@ -1047,7 +1050,7 @@ Overfull \hbox (9.56126pt too wide) in paragraph at lines 1812--1813
 [46
 
 ]
-Overfull \hbox (10.3886pt too wide) in paragraph at lines 1853--1854
+Overfull \hbox (10.3886pt too wide) in paragraph at lines 1855--1856
 \OT1/cmr/m/n/12 Hastings algorithm we can for example take a multivariate Gauss
 ian as proposal distribution.
  []
@@ -1056,10 +1059,10 @@ ian as proposal distribution.
 <plot_deep_gpr.png, id=213, 377.61075pt x 237.2865pt>
 File: plot_deep_gpr.png Graphic file (type png)
 <use plot_deep_gpr.png>
-Package pdftex.def Info: plot_deep_gpr.png  used on input line 1909.
+Package pdftex.def Info: plot_deep_gpr.png  used on input line 1911.
 (pdftex.def)             Requested size: 182.09485pt x 114.42484pt.
  [49 <./plot_deep_gpr.png>]
-Overfull \hbox (2.6776pt too wide) in paragraph at lines 1926--1927
+Overfull \hbox (2.6776pt too wide) in paragraph at lines 1928--1929
 []\OT1/cmr/m/n/12 In (Damianou and Lawrence, 2013), one introduces the concept 
 of Deep Gaussian Processes
  []
@@ -1068,270 +1071,281 @@ of Deep Gaussian Processes
 Chapter 9.
 [52
 
-] [53]
-Overfull \hbox (6.87762pt too wide) in paragraph at lines 2014--2015
+]
+Overfull \hbox (6.87762pt too wide) in paragraph at lines 1998--1999
 []\OT1/cmr/m/n/12 First, we try to calculate the options using the FFT algorith
 m (which we did not parallelize).
  []
 
-
-Overfull \hbox (40.56578pt too wide) in paragraph at lines 2020--2050
+[53]
+Overfull \hbox (34.74596pt too wide) in paragraph at lines 2022--2052
  [][] 
- []
-
-
-Overfull \hbox (34.62836pt too wide) in paragraph at lines 2055--2056
-\OT1/cmr/m/n/12 can be very advantageous. Predicting using VFE with the BBMM fr
-amework is $9339\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 =\OT1/cmr/m
-/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 00032 =
  []
 
 [54] [55]
-Overfull \hbox (33.81578pt too wide) in paragraph at lines 2080--2110
- [][] 
+Overfull \hbox (25.48956pt too wide) in paragraph at lines 2061--2062
+\OT1/cmr/m/n/12 can be very advantageous. Predicting using VFE with the BBMM fr
+amework is $93393\OML/cmm/m/it/12 =\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/
+m/n/12 0072 =
  []
 
 
-Overfull \hbox (39.6356pt too wide) in paragraph at lines 2137--2167
+Overfull \hbox (22.99608pt too wide) in paragraph at lines 2087--2117
  [][] 
  []
 
-[56] [57] [58] [59]
-<full_bayesian_1.png, id=248, 867.24pt x 358.4592pt>
-File: full_bayesian_1.png Graphic file (type png)
-<use full_bayesian_1.png>
-Package pdftex.def Info: full_bayesian_1.png  used on input line 2178.
-(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+[56
 
-Overfull \hbox (21.39783pt too wide) in paragraph at lines 2178--2179
+] [57]
+Overfull \hbox (28.87102pt too wide) in paragraph at lines 2161--2191
  [][] 
  []
 
-<full_bayesian_2.png, id=249, 867.24pt x 358.4592pt>
-File: full_bayesian_2.png Graphic file (type png)
-<use full_bayesian_2.png>
-Package pdftex.def Info: full_bayesian_2.png  used on input line 2183.
-(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
-
-Overfull \hbox (21.39783pt too wide) in paragraph at lines 2183--2184
- [][] 
- []
-
-<full_bayesian_3.png, id=250, 867.24pt x 358.4592pt>
-File: full_bayesian_3.png Graphic file (type png)
-<use full_bayesian_3.png>
-Package pdftex.def Info: full_bayesian_3.png  used on input line 2191.
-(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
-
-Overfull \hbox (21.39783pt too wide) in paragraph at lines 2191--2192
- [][] 
- []
-
-<full_bayesian_4.png, id=251, 867.24pt x 358.4592pt>
-File: full_bayesian_4.png Graphic file (type png)
-<use full_bayesian_4.png>
-Package pdftex.def Info: full_bayesian_4.png  used on input line 2196.
-(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
-
-Overfull \hbox (21.39783pt too wide) in paragraph at lines 2196--2197
- [][] 
- []
-
-<full_bayesian_5.png, id=252, 867.24pt x 358.4592pt>
-File: full_bayesian_5.png Graphic file (type png)
-<use full_bayesian_5.png>
-Package pdftex.def Info: full_bayesian_5.png  used on input line 2204.
-(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
-
-Overfull \hbox (21.39783pt too wide) in paragraph at lines 2204--2205
- [][] 
- []
-
-<full_bayesian_6.png, id=253, 867.24pt x 358.4592pt>
-File: full_bayesian_6.png Graphic file (type png)
-<use full_bayesian_6.png>
-Package pdftex.def Info: full_bayesian_6.png  used on input line 2209.
-(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
-
-Overfull \hbox (21.39783pt too wide) in paragraph at lines 2209--2210
+[58] [59]
+Overfull \hbox (28.87102pt too wide) in paragraph at lines 2258--2288
  [][] 
  []
 
 [60
 
+] [61]
+<full_bayesian_1.png, id=255, 867.24pt x 358.4592pt>
+File: full_bayesian_1.png Graphic file (type png)
+<use full_bayesian_1.png>
+Package pdftex.def Info: full_bayesian_1.png  used on input line 2362.
+(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+
+Overfull \hbox (21.39783pt too wide) in paragraph at lines 2362--2363
+ [][] 
+ []
+
+<full_bayesian_2.png, id=256, 867.24pt x 358.4592pt>
+File: full_bayesian_2.png Graphic file (type png)
+<use full_bayesian_2.png>
+Package pdftex.def Info: full_bayesian_2.png  used on input line 2367.
+(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+
+Overfull \hbox (21.39783pt too wide) in paragraph at lines 2367--2368
+ [][] 
+ []
+
+<full_bayesian_3.png, id=257, 867.24pt x 358.4592pt>
+File: full_bayesian_3.png Graphic file (type png)
+<use full_bayesian_3.png>
+Package pdftex.def Info: full_bayesian_3.png  used on input line 2375.
+(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+
+Overfull \hbox (21.39783pt too wide) in paragraph at lines 2375--2376
+ [][] 
+ []
+
+<full_bayesian_4.png, id=258, 867.24pt x 358.4592pt>
+File: full_bayesian_4.png Graphic file (type png)
+<use full_bayesian_4.png>
+Package pdftex.def Info: full_bayesian_4.png  used on input line 2380.
+(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+
+Overfull \hbox (21.39783pt too wide) in paragraph at lines 2380--2381
+ [][] 
+ []
+
+<full_bayesian_5.png, id=259, 867.24pt x 358.4592pt>
+File: full_bayesian_5.png Graphic file (type png)
+<use full_bayesian_5.png>
+Package pdftex.def Info: full_bayesian_5.png  used on input line 2388.
+(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+
+Overfull \hbox (21.39783pt too wide) in paragraph at lines 2388--2389
+ [][] 
+ []
+
+<full_bayesian_6.png, id=260, 867.24pt x 358.4592pt>
+File: full_bayesian_6.png Graphic file (type png)
+<use full_bayesian_6.png>
+Package pdftex.def Info: full_bayesian_6.png  used on input line 2393.
+(pdftex.def)             Requested size: 235.3631pt x 97.283pt.
+
+Overfull \hbox (21.39783pt too wide) in paragraph at lines 2393--2394
+ [][] 
+ []
+
+[62
+
  <./full_bayesian_1.png> <./full_bayesian_2.png> <./full_bayesian_3.png> <./ful
 l_bayesian_4.png> <./full_bayesian_5.png> <./full_bayesian_6.png>]
 Chapter 10.
-[61
+[63
 
 ]
-<scheme_thesis.png, id=263, 346.896pt x 627.5445pt>
+<scheme_thesis.png, id=269, 346.896pt x 627.5445pt>
 File: scheme_thesis.png Graphic file (type png)
 <use scheme_thesis.png>
-Package pdftex.def Info: scheme_thesis.png  used on input line 2226.
+Package pdftex.def Info: scheme_thesis.png  used on input line 2410.
 (pdftex.def)             Requested size: 364.19664pt x 658.87413pt.
 
 
-LaTeX Warning: Float too large for page by 0.50798pt on input line 2228.
+LaTeX Warning: Float too large for page by 0.50798pt on input line 2412.
 
-
-Overfull \hbox (13.7219pt too wide) in paragraph at lines 2234--2235
+[64 <./scheme_thesis.png>]
+Overfull \hbox (13.7219pt too wide) in paragraph at lines 2420--2421
 []\OT1/cmr/m/n/12 The standard algorithm of Gaussian process regression achieve
 s excellent prediction accuracy.
  []
 
 
-Overfull \hbox (4.17198pt too wide) in paragraph at lines 2236--2237
+Overfull \hbox (4.17198pt too wide) in paragraph at lines 2422--2423
 []\OT1/cmr/m/n/12 Inducing point methods approximate the posterior and we are a
 ble to achieve a considerable
  []
 
-[62] [63 <./scheme_thesis.png>]
-Chapter 11.
-[64
+[65
 
-] [65] [66]
-Overfull \hbox (16.83968pt too wide) in paragraph at lines 2362--2362
+
+]
+Chapter 11.
+[66
+
+] [67] [68]
+Overfull \hbox (16.83968pt too wide) in paragraph at lines 2548--2548
 []\OT1/cmr/bx/n/17.28 Pricing derivatives using Monte Carlo Simulations 
  []
 
-[67] [68] [69] [70]
-Overfull \hbox (60.46342pt too wide) in paragraph at lines 2599--2599
+[69] [70] [71] [72]
+Overfull \hbox (60.46342pt too wide) in paragraph at lines 2785--2785
 []\OT1/cmr/bx/n/17.28 The Kullback-Leibler (KL) divergence and Variational
  []
 
 
-Overfull \hbox (17.63086pt too wide) in paragraph at lines 2604--2605
+Overfull \hbox (17.63086pt too wide) in paragraph at lines 2790--2791
 []
  []
 
-[71]
-Overfull \hbox (0.88164pt too wide) in paragraph at lines 2648--2648
+[73]
+Overfull \hbox (0.88164pt too wide) in paragraph at lines 2834--2834
 []\OT1/cmr/bx/n/17.28 Stochastic Variational Inference and Stochastic
  []
 
-[72]
+[74]
 File: plot_variational_inference.png Graphic file (type png)
 <use plot_variational_inference.png>
-Package pdftex.def Info: plot_variational_inference.png  used on input line 265
-5.
+Package pdftex.def Info: plot_variational_inference.png  used on input line 284
+1.
 (pdftex.def)             Requested size: 182.09485pt x 158.3218pt.
-
-
-LaTeX Warning: Citation `hensman2013' on page 73 undefined on input line 2656.
-
-
-LaTeX Warning: Citation `hensman2013' on page 73 undefined on input line 2656.
-
-[73] [74] [75]
-Overfull \hbox (5.33818pt too wide) in paragraph at lines 2767--2768
+ [75] [76] [77]
+Overfull \hbox (5.33818pt too wide) in paragraph at lines 2953--2954
 \OT1/cmr/m/n/12 which is clearly written. The Lanczos decomposition executes an
  orthogonal transformation
  []
 
-[76]
-Overfull \hbox (17.09685pt too wide) in paragraph at lines 2797--2798
+[78]
+Overfull \hbox (17.09685pt too wide) in paragraph at lines 2983--2984
 \OT1/cmr/m/n/12 In the previous sections of the appendix about numerical techni
 ques (Cholesky decomposition,
  []
 
 
-Overfull \hbox (7.3993pt too wide) in paragraph at lines 2797--2798
+Overfull \hbox (7.3993pt too wide) in paragraph at lines 2983--2984
 \OT1/cmr/m/n/12 L-BFGS, Adam, Lanczos decomposition, ...) we omitted the pseudo
 -code and its derivations
  []
 
 
-Overfull \hbox (4.10867pt too wide) in paragraph at lines 2822--2823
+Overfull \hbox (4.10867pt too wide) in paragraph at lines 3008--3009
 \OT1/cmr/m/n/12 Gram-Schmidt process. Suppose we have a set $\OML/cmm/b/it/12 u
 []\OML/cmm/m/it/12 ; [] ; \OML/cmm/b/it/12 u[]$\OT1/cmr/m/n/12 , which are line
 arly independent
  []
 
-[77] [78]
-Underfull \hbox (badness 10000) in paragraph at lines 2914--2915
+[79] [80]
+Underfull \hbox (badness 10000) in paragraph at lines 3100--3101
 []\OT1/cmr/m/it/12 Let
  []
 
 
-Overfull \hbox (12.28279pt too wide) in paragraph at lines 2914--2915
+Overfull \hbox (12.28279pt too wide) in paragraph at lines 3100--3101
 \OML/cmm/m/it/12 []; [] ; []$ \OT1/cmr/m/it/12 and $\OML/cmm/m/it/12 []; [] 
 ; []$ \OT1/cmr/m/it/12 the scalar coefficients of algorithm (5[]). The $\OML/c
 mm/m/it/12 p$\OT1/cmr/m/it/12 -dimensional
  []
 
-[79]
-Overfull \hbox (22.66144pt too wide) in paragraph at lines 2960--2961
+[81]
+Overfull \hbox (22.66144pt too wide) in paragraph at lines 3146--3147
 []\OT1/cmr/m/it/12 The pivoted Cholesky algorithm
  []
 
-[80]
-Overfull \hbox (2.53142pt too wide) in paragraph at lines 2980--2981
+[82]
+Overfull \hbox (2.53142pt too wide) in paragraph at lines 3166--3167
 []\OT1/cmr/m/it/12 Denoting with $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr
 /m/n/12 )$ \OT1/cmr/m/it/12 the matrix logarithm
  []
 
-[81] [82]
-<plot_typical_Set.png, id=333, 280.6485pt x 290.88675pt>
+[83] [84]
+<plot_typical_Set.png, id=340, 280.6485pt x 290.88675pt>
 File: plot_typical_Set.png Graphic file (type png)
 <use plot_typical_Set.png>
-Package pdftex.def Info: plot_typical_Set.png  used on input line 3066.
+Package pdftex.def Info: plot_typical_Set.png  used on input line 3252.
 (pdftex.def)             Requested size: 182.09485pt x 188.74124pt.
- [83 <./plot_typical_Set.png>]
-Overfull \hbox (0.6035pt too wide) in paragraph at lines 3091--3092
+ [85 <./plot_typical_Set.png>]
+Overfull \hbox (0.6035pt too wide) in paragraph at lines 3277--3278
 \OT1/cmr/m/n/12 preservation in the phase space. In order to solve this system 
 we use symplectic integrators,
  []
 
-<plot_levelset.png, id=338, 305.943pt x 193.9245pt>
+<plot_levelset.png, id=345, 305.943pt x 193.9245pt>
 File: plot_levelset.png Graphic file (type png)
 <use plot_levelset.png>
-Package pdftex.def Info: plot_levelset.png  used on input line 3107.
+Package pdftex.def Info: plot_levelset.png  used on input line 3293.
 (pdftex.def)             Requested size: 182.09485pt x 115.42348pt.
 
-Overfull \hbox (9.57472pt too wide) in paragraph at lines 3135--3136
+Overfull \hbox (9.57472pt too wide) in paragraph at lines 3321--3322
 []\OT1/cmr/m/n/12 Choosing suitable values for $\OML/cmm/m/it/12 L$ \OT1/cmr/m/
 n/12 and $\OML/cmm/m/it/12 "$ \OT1/cmr/m/n/12 is very important in order to obt
 ain a good performance.
  []
 
-[84] [85 <./plot_levelset.png>]
+[86] [87 <./plot_levelset.png>]
 (Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen.bbl
-[86] [87
+[88] [89
 
-] [88]
-Underfull \hbox (badness 2393) in paragraph at lines 173--177
+]
+Overfull \hbox (29.80183pt too wide) in paragraph at lines 117--121
+[]\OT1/cmr/m/n/12 Gormley, M. (2017).  Clustering (k-means).  https://www.cs.cm
+u.edu/ mgormley/courses/10601-
+ []
+
+[90]
+Underfull \hbox (badness 2393) in paragraph at lines 175--179
 []\OT1/cmr/m/n/12 Krishnamoorthy, A. and Menon, D. (2013).  Matrix inversion us
 ing cholesky
  []
 
-[89]) [90]
+[91]) [92]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3182.
-<sedes.png, id=363, 402.5439pt x 683.6742pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3368.
+<sedes.png, id=369, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 3192.
+Package pdftex.def Info: sedes.png  used on input line 3378.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (0.55522pt too wide) in paragraph at lines 3196--3197
+Overfull \hbox (0.55522pt too wide) in paragraph at lines 3382--3383
 [][][] 
  []
 
-[91 <./sedes.png>]
+[93 <./sedes.png>]
 (Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schraelen.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7733 strings out of 492895
- 122077 string characters out of 3123735
- 220429 words of memory out of 3000000
- 11471 multiletter control sequences out of 15000+200000
+ 7807 strings out of 492895
+ 123031 string characters out of 3123735
+ 213551 words of memory out of 3000000
+ 11541 multiletter control sequences out of 15000+200000
  36229 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,16n,43p,1429b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,16n,39p,1441b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/lenne/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/lenne/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbsy10.pfb><C:/Users/lenne/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
@@ -1362,9 +1376,9 @@ Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/lenne/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/lenne/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on Machine_Learning_In_Quantitative_Finance_Lennert_Van_der_Schr
-aelen.pdf (98 pages, 1310470 bytes).
+aelen.pdf (100 pages, 1314028 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
+ 453 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

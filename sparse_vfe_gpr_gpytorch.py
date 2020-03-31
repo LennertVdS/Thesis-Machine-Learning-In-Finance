@@ -48,8 +48,8 @@ def sparse_vfe_gpr_pytorch_ex(amountTraining, amountInducing, amountTest, traini
 
     startFittingTimer = timer()
 
-    model, likelihood = sparse_vfe_gpytorch_code.training(model, likelihood, train_x, train_y, 50)
-    alpha, kernel = sparse_vfe_gpytorch_code.training_extra(model,trainingParameters,parametersModelsInducing,trainingValues,0.0001)
+    model, likelihood = sparse_vfe_gpytorch_code.training(model, likelihood, train_x, train_y, 40)
+    alpha, kernel = sparse_vfe_gpytorch_code.training_extra(model,trainingParameters,parametersModelsInducing,trainingValues,0.001)
 
     endFittingTimer = timer()
 

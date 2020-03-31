@@ -91,6 +91,7 @@ def standard_gpr_pytorch_ex(amountTraining,amountTest,trainingValues,trainingPar
     # MAE = np.max(np.abs(((np.squeeze(testValues)).transpose() - y_pred)))
     # AEE = np.sum(np.abs(((np.squeeze(testValues)).transpose() - y_pred))) / amountTest
 
+
     MAE = np.max(np.abs(((testValues).transpose() - y_pred)))
     AEE = np.sum(np.abs(((testValues).transpose() - y_pred))) / amountTest
 
