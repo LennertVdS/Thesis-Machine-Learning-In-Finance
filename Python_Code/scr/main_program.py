@@ -5,18 +5,20 @@ from scr import  data_processing
 Welcome to the python code belonging to the thesis  "Machine Learning In Quantitative Finance, A kernel of truth" 
 
 This is the main file, where one can modify certain parameters and repeat the experiments. I'd like to thank the
-authors of the packages tensorflow (tf), gpytorch (gpy) and pymc3 (pym) alleviating the work. When we use one of these
+authors of the packages Tensorflow (tf), GPyTorch (gpy) and PYMC3 (pym) alleviating the work. When we use one of these
 packages, we write "_package"
 
 In order to test multiple methods at the same time, just put them all in the method string. It is also possible to include your own 
 data or ignoring the financial aspect of this code by typing 'own_data' in the string corresponding to type.
 
+Of course, the code can be easily extended training different types of options.
+
 Author: Lennert Van der Schraelen
 
 method: 
     Polynomial_Regression, standard_GPR, sparse_FITC, sparse_VFE, sparse_kmeans_FITC, sparse_kmeans_VFE, variational_tf
-    standard_gpy, vfe_gpy, variational_gpy, skip_gpy, map_bayesian_pym, full_bayesian_pym
-    map_bayesian_sparse_pym, full_bayesian_sparse_pym
+    standard_gpy, VFE_gpy, SKIP_gpy, MAP_bayesian_pym, full_bayesian_pym
+    MAP_bayesian_sparse_pym, full_bayesian_sparse_pym
 
 type:
     vanilla_call, vanilla_put, DOBP, american_call, american_put, own_data 
@@ -35,10 +37,10 @@ amountinducing:
 
 """
 
-method = 'sparse_kmeans_VFE'
-type = 'own_data'
-model = ''
-amounttraining = 10000
+method = 'VFE_gpy'
+type = 'vanilla_call'
+model = 'heston'
+amounttraining = 20000
 amounttest = 1000
 amountinducing = 400
 

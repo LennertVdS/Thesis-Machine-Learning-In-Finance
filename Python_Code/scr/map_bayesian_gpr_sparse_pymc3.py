@@ -24,9 +24,9 @@ def map_bayesian_gpr_sparse_pymc3_ex(amountTraining, amount_Inducing, amountTest
     with pm.Model() as model2:
 
         # Set priors on the hyperparameters of the covariance
-        ls1 = pm.Gamma("ls1", alpha=2, beta=2)
+        ls1 = pm.Gamma("lengthscale", alpha=2, beta=2)
 
-        eta = pm.HalfNormal("eta", sigma=2)
+        eta = pm.HalfNormal("signal variance", sigma=2)
 
         cov = eta * pm.gp.cov.ExpQuad(dimension, ls1)  # cov_x1 must accept X1 without error
 
@@ -49,9 +49,7 @@ def map_bayesian_gpr_sparse_pymc3_ex(amountTraining, amount_Inducing, amountTest
 
     d = [*mp.values()]
     kernel = C(d[4]) * RBF((d[3]))
-    K = kernel(X)
     noise = d[5] ** 2
-    K[np.diag_indices_from(K)] += noise
     K_uu = kernel(Xu,Xu)
     K_uu[np.diag_indices_from(K_uu)] += inducing_jitter
     K_xu = kernel(X,Xu)

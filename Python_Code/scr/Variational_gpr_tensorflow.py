@@ -3,7 +3,7 @@ import tensorflow_probability as tfp
 import tensorflow.compat.v1 as tf
 import sklearn as sl
 
-from scr import Variational_gpr_tensorflow_code
+from scr import variational_gpr_tensorflow_code
 from timeit import default_timer as timer
 import pymc3 as pm
 
@@ -18,7 +18,7 @@ This code calculates the fitting and predicting properties of SVG
 
 def variational_gpr_ex(amountTraining, amount_Inducing, amountTest,trainingValues,trainingParameters,testValues,testParameters):
 
-    noise = 0.00005
+    noise = 0.000001
 
     valuesTraining = np.squeeze(np.asarray(trainingValues))
     X = np.array(np.squeeze(np.asarray(trainingParameters)),dtype=np.float64)
@@ -34,7 +34,7 @@ def variational_gpr_ex(amountTraining, amount_Inducing, amountTest,trainingValue
     endFittingTimer = timer()
     print('Timer of kmeans ' + str(endFittingTimer - startFittingTimer))
 
-    gp = Variational_gpr_tensorflow_code.Variational(amountTraining, noise, inducing_index_points, X, valuesTraining, index_points, zero_mean = True)
+    gp = variational_gpr_tensorflow_code.Variational(amountTraining, noise, inducing_index_points, X, valuesTraining, index_points, zero_mean = True)
 
     startFittingTimer = timer()
     gp.fitting()

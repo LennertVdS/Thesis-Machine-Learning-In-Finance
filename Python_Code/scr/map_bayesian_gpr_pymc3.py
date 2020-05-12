@@ -22,9 +22,9 @@ def map_bayesian_gpr_pymc3_ex(amountTraining, amountTest, trainingValues, traini
     startFittingTimer = timer()
     with pm.Model() as model2:
         # Set priors on the hyperparameters of the covariance
-        ls1 = pm.Gamma("ls1", alpha=2, beta=2)
+        ls1 = pm.Gamma("lengthscale", alpha=2, beta=2)
 
-        eta = pm.HalfNormal("eta", sigma=2)
+        eta = pm.HalfNormal("signal variance", sigma=2)
 
         cov = eta * pm.gp.cov.ExpQuad(dimension, ls1)  # cov_x1 must accept X1 without error
 

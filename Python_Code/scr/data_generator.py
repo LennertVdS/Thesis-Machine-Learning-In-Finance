@@ -294,7 +294,7 @@ class data_generators_vg:
 
         return valuesFFTCallsTraining, parametersModelsTraining
 
-    def test_data_heston_vanillas(amountTest, type):
+    def test_data_vg_vanillas(amountTest, type):
 
         modelListTest = []
         valuesFFTCallsTest = pd.DataFrame(index=range(1), columns=range(amountTest))

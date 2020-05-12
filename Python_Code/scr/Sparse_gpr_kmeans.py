@@ -12,7 +12,7 @@ This code calculates the fitting and predicting properties of FITC and VFE using
 def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, method,trainingValues,trainingParameters,testValues,testParameters):
 
     noise = 0.000001
-    inducing_jitter = 0.00001
+    inducing_jitter = 0.000001
 
     # inducing values
 

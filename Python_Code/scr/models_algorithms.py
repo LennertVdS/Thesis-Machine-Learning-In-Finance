@@ -119,9 +119,7 @@ class vanilla_option_VG(model):
 
         C = 1/nu
         G = 2/((((theta**2) * (nu**2) )+ (2*(sigma**2) * nu))**(0.5) - (theta*nu))
-       # G = ((((theta**2) * (nu**2) / 4 )+ ((sigma**2) * nu /2))**(0.5) - (theta*nu/2))**(-1)
         M = 2 / ((((theta ** 2) * (nu ** 2)) + (2 * (sigma ** 2) * nu)) ** (0.5) + (theta * nu))
-       #M = ((((theta ** 2) * (nu ** 2) / 4) + ((sigma ** 2) * nu / 2))**(0.5) + (theta * nu / 2)) ** (-1)
 
         omega = nu**(-1) * np.log(1-0.5*(sigma**2)*nu - theta*nu)
         y = np.exp(np.complex(0,1) * u * np.log(S0) + (r-q+omega)*t) * ((G*M)/(G*M + (M-G)*np.complex(0,1)*u + u**2))**(C*t)
@@ -326,12 +324,3 @@ class down_and_out_barrier_option_heston(model):
 
 
 
-#test= down_and_out_barrier_option_vg(0.1,-0.1,0.3,5,100,1,50,0.01,0.01)
-#print(test.vg_carr_madan(0))
-#print(test.monte_Carlo())
-
-    # def monte_Carlo_pricing(self):
-    #     if __name__ == '__main__':
-    #         freeze_support()
-    #         DOBP = np.mean((Pool().map(self.monte_Carlo, [12500, 12500, 12500, 12500])))
-    #         return DOBP

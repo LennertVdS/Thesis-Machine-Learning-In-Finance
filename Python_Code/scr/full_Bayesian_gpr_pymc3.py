@@ -18,14 +18,12 @@ def full_bayesian_gpr_pymc3_ex(amountTraining,  amountTest, trainingValues,train
 
     dimension = X.shape[1]
 
-    print('Generating data done')
-
     startFittingTimer = timer()
     with pm.Model() as model2:
         # Set priors on the hyperparameters of the covariance
-        ls1 = pm.Gamma("ls1", alpha=2, beta=2)
+        ls1 = pm.Gamma("lengthscale", alpha=2, beta=2)
 
-        eta = pm.HalfNormal("eta", sigma=2)
+        eta = pm.HalfNormal("signal variance", sigma=2)
 
         cov = eta ** 2 * pm.gp.cov.ExpQuad(dimension, ls1)  # cov_x1 must accept X1 without error
 
@@ -37,10 +35,12 @@ def full_bayesian_gpr_pymc3_ex(amountTraining,  amountTest, trainingValues,train
         # Place a GP prior over the function f.
         gp.marginal_likelihood("y", X=X, y=valuesFFTCallsTraining, noise=sigma)
 
-
     with model2:
         #trace = pm.sample(draws = 500,tune=500, step=pm.Metropolis(), cores=1)
         trace = pm.sample(draws=500, tune=500, cores=1)
+
+    pm.traceplot(trace)
+    plt.show()
 
     endFittingTimer = timer()
     print('Timer of fitting in sample ' + str(endFittingTimer - startFittingTimer))
@@ -83,21 +83,21 @@ def full_bayesian_gpr_pymc3_ex(amountTraining,  amountTest, trainingValues,train
     print('In sample MAE ' + str(MAE))
     print('In sample AEE ' + str(AEE))
 
-    fig = plt.figure(figsize=(12, 5));
-    ax = fig.gca()
-
-    #plot the samples from the gp posterior with samples and shading
-    from pymc3.gp.util import plot_gp_dist
-    plot_gp_dist(ax, pred_samples["f_pred"], X[:,5]);
-
-    # plot the data and the true latent function
-    #plt.plot(X, f_true, "dodgerblue", lw=3, label="True f");
-
-    ax.set_title('Vanilla Call Option Regression')
-    ax.set_xlabel('Strike')
-    ax.set_ylabel('Price')
-    plt.plot(X[:,5], trainingValues.transpose(), ms=3, alpha=0.5, label="Observed data");
-    plt.show()
+    # fig = plt.figure(figsize=(12, 5));
+    # ax = fig.gca()
+    #
+    # #plot the samples from the gp posterior with samples and shading
+    # from pymc3.gp.util import plot_gp_dist
+    # plot_gp_dist(ax, pred_samples["f_pred"], X[:,5]);
+    #
+    # # plot the data and the true latent function
+    # #plt.plot(X, f_true, "dodgerblue", lw=3, label="True f");
+    #
+    # ax.set_title('Vanilla Call Option Regression')
+    # ax.set_xlabel('Strike')
+    # ax.set_ylabel('Price')
+    # plt.plot(X[:,5], trainingValues.transpose(), ms=3, alpha=0.5, label="Observed data");
+    # plt.show()
 
 
 

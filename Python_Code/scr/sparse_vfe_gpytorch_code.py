@@ -93,9 +93,7 @@ def training_extra(model,trainingParameters,parametersModelsInducing,trainingVal
     noise = model.likelihood.noise.item()
 
     kernel = C(signal_variance) * RBF((lengthscale))
-    K = kernel(trainingParameters)
     noise = noise ** 2
-    K[np.diag_indices_from(K)] += noise
     K_uu = kernel(parametersModelsInducing, parametersModelsInducing)
     K_uu[np.diag_indices_from(K_uu)] += inducingnoise
     K_xu = kernel(trainingParameters, parametersModelsInducing)
