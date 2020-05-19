@@ -3,6 +3,7 @@ from sklearn.cluster import KMeans
 from sklearn.gaussian_process.kernels import RBF, ConstantKernel as C
 from scr import sparse_gpr_kmeans_code
 from timeit import default_timer as timer
+import matplotlib.pyplot as plt
 
 
 """
@@ -71,6 +72,41 @@ def sparse_gpr_kmeans_ex(amountTraining, amountInducing, amountTest, method,trai
 
     print('Out of sample MAE ' + str(MAE.to_numpy()))
     print('Out of sample AEE ' + str(AAE.to_numpy()))
+
+    # startPredictingDerivative = timer()
+    # for i in range(10):
+    #     derivatives = gp.derivative(testParameters,5)
+    # endPredictingDerivative = timer()
+    #
+    # print('Timer finding derivatives ' + str((endPredictingDerivative - startPredictingDerivative)/10))
+    #
+    #
+    # fig = plt.figure(figsize=(12, 5))
+    # ax = fig.gca()
+    # ax.set_title('VFE fit')
+    # ax.set_xlabel('Strike')
+    # ax.set_ylabel('Price')
+    # ax.plot(testParameters.iloc[:,5],y_pred,label = "VFE fit")
+    # ax.plot(testParameters.iloc[:,5],testValues.transpose(),'bo', label = "Data Points")
+    # legend = ax.legend(loc='upper right', shadow=True, prop={'size': 10},
+    #            ncol=4)
+    # plt.show()
+    #
+    #
+    # fig = plt.figure(figsize=(12, 5))
+    # ax = fig.gca()
+    # ax.set_title('Derivative')
+    # ax.set_xlabel('Strike')
+    # ax.set_ylabel('Derivative Option Price Towards Strike')
+    # plt.plot(testParameters.iloc[:,5],derivatives,label = "VFE Derivative")
+    # plt.plot(testParameters.iloc[0:99,5],np.diff(np.squeeze(y_pred))*120,label = "Finite Differences")
+    # legend = ax.legend(loc='upper left', shadow=True, prop={'size': 10},
+    #            ncol=4)
+    # plt.show()
+
+
+
+
 
 
 

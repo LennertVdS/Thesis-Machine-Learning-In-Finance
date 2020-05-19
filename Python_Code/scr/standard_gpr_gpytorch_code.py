@@ -41,8 +41,8 @@ def prediction(model, likelihood,test_x,train_x,alpha,kernel):
     #
     #     mean = model(test_x).mean
 
-    K_ast = kernel(train_x, test_x)
-    mean = (K_ast.transpose()).dot(alpha)
+    K_ast = kernel(test_x,train_x)
+    mean = (K_ast).dot(alpha)
 
     return mean
 
@@ -97,6 +97,21 @@ def training_extra(model, trainingParameters, trainingValues):
     alpha = cho_solve((L, True), trainingValues.transpose())
 
     return alpha,kernel
+
+def derivative(model, X_test, place, X_train, kernel, alpha):
+        K_ast = kernel(X_train,X_test)
+        n_ast = len(X_test[:,0])
+        derivative_vector = np.empty(n_ast)
+        values = X_train[:, place]
+        test = X_test[:, place]
+        constant = (1 / (model.covar_module.base_kernel.lengthscale.item() ** 2))
+        a = np.squeeze(alpha)
+        for i in range(n_ast):
+            b = constant * (test[i] - values)
+            c = np.multiply(K_ast[:,i],a)
+            derivative_vector[i] = -np.dot(b,c)
+        return derivative_vector
+
 
 def cholesky_dec(matrix):
     try:

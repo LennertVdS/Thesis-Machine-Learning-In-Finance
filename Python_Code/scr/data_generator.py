@@ -30,15 +30,15 @@ class data_generators_heston:
 
             # heston
 
-            kappa = np.random.uniform(1.4, 2.6)
+            kappa = np.random.uniform(0.4, 1.6)
             rho = np.random.uniform(-0.85, -0.55)
             theta = np.random.uniform(0.45, 0.75)
             eta = np.random.uniform(0.01, 0.1)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.99, 0.9048)))
 
             # stock_value = 1
-            # strike = 0.4+ (1/amountTraining) *x
-            # maturity = 1
+            # strike = np.random.uniform(0.4, 1.6)
+            # maturity =  12/13
             # interest = 0.02
             # dividend_yield = 0.25
             #
@@ -47,8 +47,8 @@ class data_generators_heston:
             # kappa = 2
             # rho = -0.7
             # theta = 0.6
-            # eta = 0.02
-            # sigma0 = 0.1
+            # eta = 0.07
+            # sigma0 = 0.2
 
             modelListTraining.append(
                 models_algorithms.vanilla_option_heston(kappa, eta, theta, rho, sigma0, strike, maturity, stock_value,
@@ -85,6 +85,20 @@ class data_generators_heston:
             theta = np.random.uniform(0.5, 0.7)
             eta = np.random.uniform(0.02, 0.1)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.9802, 0.9048)))
+
+            # stock_value = 1
+            # strike = 0.6 + (1/(1.2*amountTest) )*x
+            # maturity =  12/13
+            # interest = 0.02
+            # dividend_yield = 0.25
+            #
+            # # heston
+            #
+            # kappa = 2
+            # rho = -0.7
+            # theta = 0.6
+            # eta = 0.07
+            # sigma0 = 0.2
 
             modelListTest.append(
                     models_algorithms.vanilla_option_heston(kappa, eta, theta, rho, sigma0, strike, maturity, stock_value,
@@ -132,12 +146,28 @@ class data_generators_heston:
             eta = np.random.uniform(0.01, 0.1)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.99, 0.8521)))
 
+            stock_value = 1
+            strike = 0.9
+            barrier = 0.7
+            maturity =  np.random.uniform(0.1, 1.3)
+            interest = 0.02
+            dividend_yield = 0.25
+
+            # heston
+
+            kappa = 2
+            rho = -0.7
+            theta = 0.6
+            eta = 0.07
+            sigma0 = 0.2
+
+
             modelListTraining.append(
                 models_algorithms.down_and_out_barrier_option_heston(kappa, eta, theta, rho, sigma0, barrier, strike, maturity, stock_value,
                                                         interest, dividend_yield))
 
         for i, model in enumerate(modelListTraining):
-            valuesDOBPTraining[i] = model.monte_Carlo(1000,1/250)
+            valuesDOBPTraining[i] = model.monte_Carlo(50000,1/50)
             for j, parameter in enumerate(model.get_parameters()):
                 parametersModelsTraining.iat[i, j] = parameter
 
@@ -166,6 +196,21 @@ class data_generators_heston:
             eta = np.random.uniform(0.02, 0.16)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.9802,  0.8521)))
 
+            stock_value = 1
+            strike = 0.9
+            barrier = 0.7
+            maturity =  0.2+(1/amountTest) *x
+            interest = 0.02
+            dividend_yield = 0.25
+
+            # heston
+
+            kappa = 2
+            rho = -0.7
+            theta = 0.6
+            eta = 0.07
+            sigma0 = 0.2
+
             modelListTest.append(
                 models_algorithms.down_and_out_barrier_option_heston(kappa, eta, theta, rho, sigma0, barrier, strike, maturity, stock_value,
                                                         interest, dividend_yield))
@@ -176,7 +221,7 @@ class data_generators_heston:
 
         startPredictingOutSampleTimerFFT = timer()
         for i, model in enumerate(modelListTest):
-            valuesDOBPTest[i] = model.monte_Carlo(100000,1/250)
+            valuesDOBPTest[i] = model.monte_Carlo(50000,1/50)
         endPredictingOutSampleTimerFFT = timer()
 
         print('Timer of predicting out sample FFT ' + str(

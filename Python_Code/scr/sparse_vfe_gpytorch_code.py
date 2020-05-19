@@ -91,7 +91,6 @@ def training_extra(model,trainingParameters,parametersModelsInducing,trainingVal
     signal_variance = model.base_covar_module.outputscale.item()
     lengthscale = model.base_covar_module.base_kernel.lengthscale.item()
     noise = model.likelihood.noise.item()
-
     kernel = C(signal_variance) * RBF((lengthscale))
     noise = noise ** 2
     K_uu = kernel(parametersModelsInducing, parametersModelsInducing)
@@ -122,3 +121,17 @@ def cholesky_dec(matrix):
                     "GaussianProcessRegressor estimator.")
         raise
     return L
+
+def derivative(model, X_test, place, U_induce, kernel, alpha):
+        K_ast = kernel(U_induce,X_test)
+        n_ast = len(X_test[:,0])
+        derivative_vector = np.empty(n_ast)
+        inducing = U_induce[:, place]
+        test = X_test[:, place]
+        constant = (1/model.base_covar_module.base_kernel.lengthscale.item() **2)
+        a = np.squeeze(alpha)
+        for i in range(n_ast):
+            b = constant * (test[i] - inducing)
+            c = (np.multiply(K_ast[:,i],a))
+            derivative_vector[i] = -np.dot(b,c)
+        return derivative_vector

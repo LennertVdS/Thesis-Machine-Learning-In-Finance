@@ -51,3 +51,6 @@ def basic_regression_ex(amountTraining, amountTest, trainingValues,trainingParam
 
     print('Out of sample MAE ' + str(MAE.to_numpy()))
     print('Out of sample AEE ' + str(AAE.to_numpy()))
+
+    print(np.min(testValues.transpose()))
+    print(np.max(testValues.transpose()))

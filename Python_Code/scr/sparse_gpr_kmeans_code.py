@@ -168,3 +168,17 @@ class gaussianprocessregression:
 
         return log_likelihood - trace
 
+
+    def derivative(self, X_test, place):
+        K_ast = self.kernel(self.U_induce,X_test)
+        n_ast = len(X_test.iloc[:,0])
+        derivative_vector = np.empty(n_ast)
+        inducing = self.U_induce[:, place]
+        test = X_test.iloc[:, place]
+        constant = (1/self.kernel.theta[1] **2)
+        a = np.squeeze(self.alpha)
+        for i in range(n_ast):
+            b = constant * (test[i] - inducing)
+            c = (np.multiply(K_ast[:,i],a))
+            derivative_vector[i] = -np.dot(b,c)
+        return derivative_vector

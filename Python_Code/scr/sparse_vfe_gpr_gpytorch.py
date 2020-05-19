@@ -4,6 +4,7 @@ import numpy as np
 from timeit import default_timer as timer
 from scr import sparse_vfe_gpytorch_code
 from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
 
 
 
@@ -87,5 +88,36 @@ def sparse_vfe_gpr_pytorch_ex(amountTraining, amountInducing, amountTest, traini
 
     print('Out of sample MAE ' + str(MAE))
     print('Out of sample AEE ' + str(AEE))
+
+    startPredictingDerivative = timer()
+    for i in range(10):
+        derivatives = sparse_vfe_gpytorch_code.derivative(model, testParameters, 5, parametersModelsInducing, kernel, alpha)
+    endPredictingDerivative = timer()
+
+    print('Timer finding derivatives ' + str((endPredictingDerivative - startPredictingDerivative)/10))
+
+
+    # fig = plt.figure(figsize=(12, 5))
+    # ax = fig.gca()
+    # ax.set_title('BBMM VFE fit')
+    # ax.set_xlabel('Strike')
+    # ax.set_ylabel('Price')
+    # ax.plot(testParameters[:,5],y_pred,label = "BBMM VFE fit")
+    # ax.plot(testParameters[:,5],testValues.transpose(),'bo', label = "Data Points")
+    # legend = ax.legend(loc='upper right', shadow=True, prop={'size': 10},
+    #            ncol=4)
+    # plt.show()
+    #
+    #
+    # fig = plt.figure(figsize=(12, 5))
+    # ax = fig.gca()
+    # ax.set_title('Derivative')
+    # ax.set_xlabel('Strike')
+    # ax.set_ylabel('Derivative Option Price Towards Strike')
+    # plt.plot(testParameters[:,5],derivatives,label = "BBMM VFE Derivative")
+    # plt.plot(testParameters[0:99,5],np.diff(np.squeeze(y_pred))*120,label = "Finite Differences")
+    # legend = ax.legend(loc='upper left', shadow=True, prop={'size': 10},
+    #            ncol=4)
+    # plt.show()
 
 

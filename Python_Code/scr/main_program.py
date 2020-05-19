@@ -37,12 +37,12 @@ amountinducing:
 
 """
 
-method = 'VFE_gpy'
-type = 'vanilla_call'
+method = 'standard_gpy'
+type = 'DOBP'
 model = 'heston'
-amounttraining = 20000
-amounttest = 1000
-amountinducing = 400
+amounttraining = 500
+amounttest = 100
+amountinducing = 200
 
 np.random.seed(1)
 

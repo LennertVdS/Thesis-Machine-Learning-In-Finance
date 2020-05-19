@@ -86,4 +86,36 @@ def standard_gpr_pytorch_ex(amountTraining,amountTest,trainingValues,trainingPar
     # plt.hist((testValues).transpose() - y_pred, bins='auto')
     # plt.show()
 
+    startPredictingDerivative = timer()
+    for i in range(10):
+        derivatives = standard_gpr_gpytorch_code.derivative(model, testParameters, 7, trainingParameters, kernel, alpha)
+    endPredictingDerivative = timer()
+
+    print('Timer finding derivatives ' + str((endPredictingDerivative - startPredictingDerivative)/10))
+
+
+    fig = plt.figure(figsize=(12, 5))
+    ax = fig.gca()
+    ax.set_title('BBMM GPR fit')
+    ax.set_xlabel('Time To Maturity')
+    ax.set_ylabel('Price')
+    ax.plot(testParameters[:,7],y_pred,label = "BBMM GPR fit")
+    ax.plot(testParameters[:,7],testValues.transpose(),'bo', label = "Data Points")
+    legend = ax.legend(loc='upper left', shadow=True, prop={'size': 10},
+               ncol=4)
+    plt.show()
+
+
+    fig = plt.figure(figsize=(12, 5))
+    ax = fig.gca()
+    ax.set_title('Derivative')
+    ax.set_xlabel('Time To Maturity')
+    ax.set_ylabel('Derivative Option Price Towards Maturity')
+    plt.plot(testParameters[:,7],derivatives, label = "BBMM GPR Derivative")
+    legend = ax.legend(loc='upper right', shadow=True, prop={'size': 10},
+               ncol=4)
+    plt.show()
+
+
+
 

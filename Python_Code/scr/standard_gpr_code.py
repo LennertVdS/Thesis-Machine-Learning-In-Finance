@@ -21,11 +21,10 @@ class gaussianprocessregression:
         self.zero_mean = zero_mean
         self.n_restarts_optimizer = 1
 
-
     def prediction(self,X_test):
 
-        K_ast = self.kernel(self.X_train,X_test)
-        pred = (K_ast.transpose()).dot(self.alpha)
+        K_ast = self.kernel(X_test,self.X_train)
+        pred = (K_ast).dot(self.alpha)
 
         if self.zero_mean is False:
             pred += self.pol_reg.predict(self.poly.fit_transform(X_test))
@@ -100,3 +99,16 @@ class gaussianprocessregression:
 
         return log_likelihood
 
+    def derivative(self, X_test, place):
+        K_ast = self.kernel(self.X_train,X_test)
+        n_ast = len(X_test.iloc[:,0])
+        derivative_vector = np.empty(n_ast)
+        values = self.X_train.iloc[:, place]
+        test = X_test.iloc[:, place]
+        constant = (1 / (self.kernel.theta[1] ** 2))
+        a = np.squeeze(self.alpha)
+        for i in range(n_ast):
+            b = constant * (test[i] - values)
+            c = np.multiply(K_ast[:,i],a)
+            derivative_vector[i] = -np.dot(b,c)
+        return derivative_vector
