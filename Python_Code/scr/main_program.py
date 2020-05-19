@@ -37,8 +37,8 @@ amountinducing:
 
 """
 
-method = 'standard_gpy'
-type = 'DOBP'
+method = 'standard_GPR'
+type = 'vanilla_call'
 model = 'heston'
 amounttraining = 500
 amounttest = 100

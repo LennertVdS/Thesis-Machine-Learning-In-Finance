@@ -146,20 +146,20 @@ class data_generators_heston:
             eta = np.random.uniform(0.01, 0.1)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.99, 0.8521)))
 
-            stock_value = 1
-            strike = 0.9
-            barrier = 0.7
-            maturity =  np.random.uniform(0.1, 1.3)
-            interest = 0.02
-            dividend_yield = 0.25
-
-            # heston
-
-            kappa = 2
-            rho = -0.7
-            theta = 0.6
-            eta = 0.07
-            sigma0 = 0.2
+            # stock_value = 1
+            # strike = 0.9
+            # barrier = 0.7
+            # maturity =  np.random.uniform(0.1, 1.3)
+            # interest = 0.02
+            # dividend_yield = 0.25
+            #
+            # # heston
+            #
+            # kappa = 2
+            # rho = -0.7
+            # theta = 0.6
+            # eta = 0.07
+            # sigma0 = 0.2
 
 
             modelListTraining.append(
@@ -196,20 +196,20 @@ class data_generators_heston:
             eta = np.random.uniform(0.02, 0.16)
             sigma0 = np.sqrt(-np.log(np.random.uniform(0.9802,  0.8521)))
 
-            stock_value = 1
-            strike = 0.9
-            barrier = 0.7
-            maturity =  0.2+(1/amountTest) *x
-            interest = 0.02
-            dividend_yield = 0.25
-
-            # heston
-
-            kappa = 2
-            rho = -0.7
-            theta = 0.6
-            eta = 0.07
-            sigma0 = 0.2
+            # stock_value = 1
+            # strike = 0.9
+            # barrier = 0.7
+            # maturity =  0.2+(1/amountTest) *x
+            # interest = 0.02
+            # dividend_yield = 0.25
+            #
+            # # heston
+            #
+            # kappa = 2
+            # rho = -0.7
+            # theta = 0.6
+            # eta = 0.07
+            # sigma0 = 0.2
 
             modelListTest.append(
                 models_algorithms.down_and_out_barrier_option_heston(kappa, eta, theta, rho, sigma0, barrier, strike, maturity, stock_value,
